@@ -1,0 +1,16 @@
+@mixin create-icon($icon-name, $color:$default-icon-color, $size:$var-no-value){
+    min-width:25px;
+    text-align: center;
+    font-size: 1.5em;
+    margin:$margin-sm;
+    color:$color;
+    @extend .fa;
+    @if $size!=$var-no-value{
+        @extend #{$size};
+    }
+    @extend #{$icon-name};
+    &::before{
+        position: relative;
+        top: $var-icon-top;
+    }
+}

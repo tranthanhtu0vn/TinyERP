@@ -1,0 +1,6 @@
+<div class="{{cls}}" *ngIf="state==ENUMS.TabState.Active">
+    <div class="{{cls}}__commands" [ngClass]="{'container__right col-16':commandAlign==ENUMS.ItemAlign.Right}">
+            <ng-content select="commands"></ng-content>
+    </div>
+    <ng-content></ng-content>
+</div>

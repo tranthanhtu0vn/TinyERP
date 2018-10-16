@@ -1,0 +1,12 @@
+<list [items]=items [cls]="'list--flex '" [itemCls]="'list--flex__item'" [noContentText]="noContentText">
+    <template let-item="item">
+        <ng-container *ngIf="type==ENUMS.FormSelectType.Single">
+            <input type="radio" class="flat" name="form-select-single-{{id}}" id="form-select-single-{{id}}-{{item.value}}" value="{{item.value}}"  />
+            <label for="form-select-single-{{id}}-{{item.value}}">{{item.text}}</label>
+        </ng-container>
+        <ng-container *ngIf="type==ENUMS.FormSelectType.Multiple">
+                <input type="checkbox" class="flat" name="form-select-single-{{id}}" id="form-select-single-{{id}}-{{item.value}}" value="{{item.value}}" />
+                <label for="form-select-single-{{id}}-{{item.value}}">{{item.text}}</label>
+        </ng-container>
+    </template>
+</list>

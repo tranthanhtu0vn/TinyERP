@@ -1,0 +1,12 @@
+<span class="{{cls}}">
+    <ng-container *ngIf="source==Enums.VideoSourceType.File">
+        <video class="{{cls}}__video" width="100%" height="{{mediaHeight}}" controls preload="auto" data-setup='{ "playbackRates": [1, 1.5, 2] }'
+            [src]="src"></video>
+    </ng-container>
+    <ng-container *ngIf="source==Enums.VideoSourceType.Youtube">
+        <iframe width="100%" height="{{mediaHeight}}" [src]="youtubeVideoUrl" border="0"></iframe>
+    </ng-container>
+    <ng-container *ngIf="readOnly===false">
+        <form-file-select class="{{cls+'__editor'}}" accept="{{accept}}" (onFileSelected)="onNewFileSelected($event)"></form-file-select>
+    </ng-container>
+</span>

@@ -1,0 +1,25 @@
+<div class="{{cls}}">
+    <multi-columns>
+        <column [ngClass]="{'col-4': direction==ENUMS.TabDirection.Horizontal,'col-16':direction==ENUMS.TabDirection.Vertical}">
+            <list [items]="headers" [cls]="cls+'__header'" [itemCls]="cls+'__header__item'">
+                <template let-header="item">
+                    <!-- will check how to remove getClsForHeaderItemLink later -->
+                    <form-default-link *ngIf="header.visible==true" [label]="header.title" [cls]="getClsForHeaderItemLink(header)" 
+                        (onClick)="onHeaderItemClicked(header)"></form-default-link>
+
+                    <!-- <form-default-link [label]="header.text" [cls]="{
+                        '__header__item--active__text': header.tab.state == ENUMS.TabState.Active,
+                        '__header__item__text': header.tab.state==ENUMS.TabState.InActive,
+                        '__header__item--disabled__text': header.tab.state==ENUMS.TabState.Disabled
+                    }" 
+                    (onClick)="onHeaderItemClicked(header)"></form-default-link> -->
+                </template>
+            </list>
+        </column>
+        <column [ngClass]="{'col-12': direction==ENUMS.TabDirection.Horizontal,'col-16':direction==ENUMS.TabDirection.Vertical}">
+            <div class="{{cls+'__content'}}">
+                <ng-content select="tab"></ng-content>
+            </div>
+        </column>
+    </multi-columns>
+</div>

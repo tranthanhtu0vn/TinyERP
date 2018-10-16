@@ -1,0 +1,11 @@
+<ul class="{{cls}}">
+    <ng-container *ngIf="noContentText!='' && !!items && items.length==0">
+        <li>{{noContentText}}</li>
+    </ng-container>
+    <li id="{{getItemId(item)}}" *ngFor="let item of items" class="{{itemCls}}">
+        <ng-container [ngTemplateOutlet]="itemTemplate" [ngOutletContext]="{item: item, onItemClicked: onItemClicked}"></ng-container>
+        <!-- <ng-container [ngTemplateOutlet]="itemTemplate" [ngOutletContext]="getContext(item)"></ng-container> -->
+        <!-- <ng-template [[ngTemplateOutlet]="itemTemplate" [ngTemplateOutletContext]]="{$implicit: item}"></ng-template>  -->
+        <!-- <ng-template [ngTemplateOutlet]="itemTemplate" [ngTemplateOutletContext]="{item: {name:item.name}}"></ng-template> -->
+    </li>
+</ul>

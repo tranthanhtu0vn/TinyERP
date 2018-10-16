@@ -1,0 +1,10 @@
+<ul class="{{cls}}">
+    <li *ngFor="let menuItem of items">
+        <a [routerLink]='[menuItem.url]' [attr.hasChild]="menuItem.hasChild()?true:false" title="{{menuItem.text}}">
+            <i class="{{menuItem.cls}}"></i>
+            {{menuItem.text}}
+            <span *ngIf="menuItem.hasChild()" class="fa fa-chevron-down"></span>
+        </a>
+        <main-menu cls="nav child_menu" *ngIf="menuItem.hasChild()" [items]=menuItem.subMenuItems></main-menu>
+    </li>
+</ul>

@@ -1,0 +1,110 @@
+{
+    "menuTitle": "Security",
+    "common":{
+        "userAccountStatus":{
+            "None":"None",
+            "Active":"Active",
+            "InActive":"InActive",
+            "Pending":"Pending"
+        }
+    },
+    "users":{
+        "title":"Manage User(s)",
+        "grid":{
+            "fullName":"Full Name",
+            "email":"Email",
+            "status":"Status",
+            "roles":"Role(s)",
+            "lastLogin":"Last login",
+            "createdDate":"Created date",
+            "actions":{
+                "disable":"Disable",
+                "enable":"Enable"
+            }
+        }
+    },
+    "userUpdate":{
+        "title":"User detail",
+        "firstName":"First name",
+        "lastName":"Last name",
+        "email":"Email",
+        "roles":{
+            "domainKey":"Domain",
+            "roleKey":"Role",
+            "action":"Action",
+            "addRole":"Add Role"
+        },
+        "addRole":{
+            "inputRoleKey":"Please input role key",
+            "inputDomainKey":"Please input domain key",
+            "roleWasRequireField":"Role was required field",
+            "domainWasRequireField":"Domain was required field"
+        }
+    },
+    "account": {
+        "register": {
+            "firstName": "First name",
+            "inputFirstName": "Input your first name",
+            "lastName": "Last name",
+            "inputLastName": "Input your last name",
+            "email": "Email",
+            "inputEmail": "Input your email",
+            "password": "Password",
+            "confirmPassword":"Confirm pasword",
+            "inputPassword": "Input your password",
+            "register": "Register",
+            "cancel": "Cancel",
+            "invitor":"Invited by",
+          "validation": {
+            "lastNameIsRequired": "Full Name was required",
+            "firstNameIsRequired": "Full Name was required",
+            "invalidEmail": "Email was invalid",
+            "emailWasUsed": "Provided email was used. Please try another",
+            "invalidPassword":"Password was required.",
+            "passwordDoesNotMatch": "Password and confirm password does not match. Please check again.",
+            "confirmPasswordWasRequired": "Please enter confirm password.",
+            "accountWasNotActivated": "Your account was not activated. Please check your email."
+          }
+        },
+        "login": {
+            "title": "Login",
+            "email": "Email",
+            "inputEmail": "Please input your email",
+            "password": "Paswword",
+            "inputPassword": "Please input your password",
+            "register": "Register an account",
+            "validation": {
+                "invalidEmailOrPwd": "Invalid email or password.",
+                "emailIsRequired": "Email is required",
+                "pwdIsRequired": "Password is required",
+                "accountWasNotActivated":"Please signin your email and follow the intruction to activate your account."
+            }
+        }
+    },
+    "permissions": {
+        "menuTitle": "Permissions",
+        "title": "Permissions",
+        "addNewAction": "Add Permission",
+        "grid": {
+            "name": "Name",
+            "key": "Key",
+            "description": "Description"
+        }
+    },
+    "addOrUpdatePermission": {
+        "title": "Add Permission",
+        "name": "Name",
+        "inputName": "Please input name",
+        "key": "key",
+        "inputKey": "Please input key",
+        "desc": "Description",
+        "inputDesc": "Please input description",
+        "validation": {
+            "nameIsRequired": "Please input name",
+            "nameAlreadyExisted": "This name is already existed. Please input another name",
+            "keyIsRequired": "Please input key",
+            "keyAlreadyExisted": "This key is already existed. Please input another key",
+            "keyShouldNotHaveWhiteSpace": "The key should not have white space"
+        }
+    }
+}

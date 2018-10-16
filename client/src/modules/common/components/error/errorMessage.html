@@ -1,0 +1,10 @@
+<alert [cls]="'error-message'" [type]="ENUMS.AlertType.Danger" *ngIf="visible==true" [title]="title">
+    <list 
+        [cls]="cls+'__items'" 
+        [itemCls]="cls+'__item'"
+        [items]="errors">
+        <template let-item="item">
+            <span [innerHTML]="resolve(item)"></span>
+        </template>
+    </list>
+</alert>

@@ -1,0 +1,11 @@
+dist/**/*.*
+src/**/*.d.ts
+src/**/*.js.map
+npm-debug.log.*
+!src/resources/**/*.*
+!src/themes/default/vendors/**/*.*
+!src/themes/default/images/**/*.*
+!src/themes/default/css/**/*.*
+!src/themes/default/js/**/*.*
+!src/extension.d.ts
+node_modules

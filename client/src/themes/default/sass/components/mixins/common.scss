@@ -1,0 +1,96 @@
+@mixin create-thumbnail(
+    $width,
+    $bg,
+    $min-width,
+    $max-width,
+    $min-height,
+    $max-height,
+    $photo-min-width,
+    $photo-min-height,
+    $photo-max-height,
+    $photo-max-width: $photo-thumbnail-max-width
+){
+    width: $width;
+    min-width: $min-width;
+    max-width: $max-width;
+    min-height: $min-height;
+    max-height: $max-height;
+    background-color:$bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__photo{
+        min-width: $photo-min-width;
+        max-height: $photo-max-height;
+        min-height: $photo-min-height;
+        max-width: $photo-max-width;
+    }
+}
+@mixin create-pricing(
+$width,
+$font-size,
+$font-weight,
+$color:$pricing-color
+){
+    &__price{
+        width: $width;
+        display: block;
+        font-size: $font-size;
+        font-weight: $font-weight;
+        color:$color;
+    }
+    &__time-left{
+        width: $width;
+        display: block;
+    }
+    &__origin-price{
+        font-size: $font-size/2;
+        text-decoration: underline;
+    }
+}
+@mixin create-button(
+    $width,
+    $line-height,
+    $font-size,
+    $bg,
+    $color,
+    $radius,
+    $margin-top
+){
+    width: $width;
+    display: block;
+    text-align: center;
+    line-height: $line-height;
+    font-size: $font-size;
+    border: 1px solid $bg;
+    background-color: $bg;
+    color: $color;
+    border-radius: $radius;
+    margin-top: $margin-top;
+}
+@mixin create-box($device: $var-no-value){
+    @if $device!= $device-mobile{
+        display: block;
+        margin: 1px;
+        border-radius: 3px;
+        box-shadow: 0 0 1px 1px hsla(0,0%,7%,.1),0 3px 1px 0 hsla(0,0%,7%,.1);
+        padding: 10px;
+        background-color: #fff;
+        @media screen and (max-width:$mobile-max-width){
+            &{
+                border-width: 0px;
+                box-shadow: none;
+            }
+        }
+    }@else if $device=$device-mobile{
+        @media screen and (max-width:$mobile-max-width){
+            &{    
+                display: block;
+                border-radius: 3px;
+                box-shadow: 0 0 1px 1px hsla(0,0%,7%,.1),0 3px 1px 0 hsla(0,0%,7%,.1);
+                padding: 10px;
+                background-color: #fff;
+            }
+        }
+    } 
+}

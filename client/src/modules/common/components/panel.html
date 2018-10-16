@@ -1,0 +1,15 @@
+<div class="{{cls}}">
+    <ng-container *ngIf="title">
+        <h3 class="{{cls}}__title">
+            {{title}}
+            <ng-content *ngIf="commandPosition==ENUMS.LayoutPosition.Top" select="panel-command"></ng-content>
+        </h3>
+    </ng-container>
+    <ng-content select="commands"></ng-content>
+    <div class="{{cls}}__content">
+        <ng-content></ng-content>
+    </div>
+    <div class="{{cls}}__footer" *ngIf="commandPosition==ENUMS.LayoutPosition.Bottom">
+        <ng-content select="bottom-commands"></ng-content>
+    </div>
+</div>

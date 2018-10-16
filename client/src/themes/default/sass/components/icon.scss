@@ -1,0 +1,98 @@
+@import "mixins/icon";
+.icon-expand{
+    @include create-icon($icon-name:$var-icon-expand);
+}
+.icon-expand--white{
+    @extend .icon-expand;
+    color: $color-white;
+}
+.icon-collapse{
+    @include create-icon($icon-name:$var-icon-collapse);
+}
+.icon-collapse--white{
+    @extend .icon-collapse;
+    color: $color-white;
+}
+
+
+.icon-play{
+    @include create-icon($icon-name:$var-icon-play);
+}
+.icon-play--white{
+    @extend .icon-play;
+    color: $color-white;
+}
+
+.icon-pause{
+    @include create-icon($icon-name:$var-icon-pause);
+}
+.icon-pause--white{
+    @extend .icon-pause;
+    color: $color-white;
+}
+
+.icon-list{
+    @include create-icon($icon-name:$var-icon-list);
+}
+.icon-list--white{
+    @extend .icon-list;
+    color: $color-white;
+}
+
+.icon-signout{
+    @include create-icon($icon-name:$var-icon-logout);
+}
+
+.icon-add{
+    @include create-icon($icon-name:$var-icon-add);
+}
+
+.icon-back{
+    @include create-icon($icon-name:$var-icon-back);
+}
+.icon-save{
+    @include create-icon($icon-name:$var-icon-save);
+}
+
+.icon-cancel{
+    @include create-icon($icon-name:$var-icon-cancel);
+}
+
+.icon-delete{
+    @include create-icon($icon-name:$var-icon-delete);
+}
+
+.icon-edit{
+    @include create-icon($icon-name:$var-icon-edit);
+}
+
+.icon-copy{
+    @include create-icon($icon-name:$var-icon-copy);
+}
+
+.icon-home{
+    @include create-icon($icon-name:$var-icon-home);
+}
+.icon-home--white{
+    @include create-icon($icon-name:$var-icon-home);
+    color:$color-white;
+}
+
+.icon-check{
+    @include create-icon($icon-name:$var-icon-check);
+}
+.icon-uncheck{
+    @include create-icon($icon-name:$var-icon-uncheck);
+}
+
+.icon-approve{
+    @include create-icon($icon-name:$var-icon-approve);
+}
+
+.icon-approved{
+    @include create-icon($icon-name:$var-icon-approved);
+}
+
+.icon-help{
+    @include create-icon($icon-name:$var-icon-help);
+}

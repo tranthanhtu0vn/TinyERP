@@ -1,0 +1,16 @@
+<horizontal-form [title]="showTitle==true?i18n.security.account.login.title:''" class="col-sm-12">
+    <form-text-input [labelText]=i18n.security.account.login.email [placeHolderText]=i18n.security.account.login.inputEmail 
+        [validation]="[
+            'security.account.login.validation.invalidEmailOrPwd', 
+            'security.account.login.validation.emailIsRequired',
+            'security.account.login.validation.accountWasNotActivated'
+        ]"
+        [(model)]=model.userName>
+    </form-text-input>
+    <form-password-input [labelText]=i18n.security.account.login.password [placeHolderText]=i18n.security.account.login.inputPassword
+        [validation]="['security.account.login.validation.invalidEmailOrPwd', 'security.account.login.validation.pwdIsRequired']"
+        [(model)]=model.password>
+    </form-password-input>
+    <form-primary-button (onClick)="onLoginClicked($event)" [label]="i18n.common.form.login"></form-primary-button>
+    <form-default-link *ngIf="allowRegister===true" (onClick)="onRegisterClicked.emit(model);" [label]="i18n.security.account.login.register"></form-default-link>
+</horizontal-form>

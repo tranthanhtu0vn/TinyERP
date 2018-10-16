@@ -1,0 +1,15 @@
+<ng-container *ngIf="type==ENUMS.MessageType.Infomation">
+    <panel [cls]="'message--information'" [title]="title">
+        <content [innerHTML]=message></content>
+    </panel>
+</ng-container>
+<ng-container *ngIf="type==ENUMS.MessageType.Warning">
+    <panel [cls]="'message--warning'" [title]="title">
+        <content [innerHTML]=message></content>
+    </panel>
+</ng-container>
+<ng-container *ngIf="type==ENUMS.MessageType.Error">
+    <panel [cls]="'message--error'" [title]="title">
+        <content [innerHTML]=message></content>
+    </panel>
+</ng-container>

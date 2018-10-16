@@ -1,0 +1,35 @@
+<div class="form-group row">
+	<label *ngIf="noLabel==false" class="col-xs-12" [ngClass]="{
+				'control-label col-md-4 col-sm-4':direction==ENUMS.LayoutDirection.Horizontal, 
+				'col-md-12 col-sm-12':direction==ENUMS.LayoutDirection.Vertical
+			}" for="first-name">
+		{{labelText}}
+	</label>
+	<div class="col-xs-12" [ngClass]="{
+				'col-md-8 col-sm-8':direction==ENUMS.LayoutDirection.Horizontal && noLabel==false, 
+				'col-md-12 col-sm-12':direction==ENUMS.LayoutDirection.Vertical || noLabel==true
+			}">
+		<ng-container *ngIf="readOnly===true && copyable===true">
+			<copyable>
+				{{model}}
+			</copyable>
+		</ng-container>
+		<ng-container *ngIf="readOnly===true && copyable===false">
+			<p>{{model}}</p>
+		</ng-container>
+		<ng-content></ng-content>
+		<ng-container *ngIf="readOnly===true">
+			
+		</ng-container>
+		<ng-container *ngIf="readOnly===false">
+			<input *ngIf="type!=ENUMS.FormInputType.Date" placeholder="{{placeHolderText}}" type="{{type}}" [(ngModel)]=model class="form-control" (blur)="onValueChanged($event)" (keyup)="onValueChanged($event)"
+			/>
+			<ng-container *ngIf="type==ENUMS.FormInputType.Date">
+					<div class="col-md-11 xdisplay_inputx form-group has-feedback">
+						<input type="text" class="form-control has-feedback-left" id="{{id}}" placeholder="{{placeHolderText}}" [(ngModel)]=model (blur)="onValueChanged($event)" (keyup)="onValueChanged($event)" />
+						<span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
+					</div>
+			</ng-container>
+		</ng-container>
+	</div>
+</div>

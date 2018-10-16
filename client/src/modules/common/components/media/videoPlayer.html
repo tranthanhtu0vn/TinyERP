@@ -1,0 +1,12 @@
+<div class="{{cls}}">
+    <ng-container *ngIf="video.source==Enums.VideoSourceType.File">
+        <video class="{{cls}}__video video-js vjs-default-skin vjs-fluid" width="100%" height="{{mediaHeight}}" controls preload="none"
+            poster='{{options.posterUrl}}' data-setup='{ "playbackRates": [1, 1.5, 2] }' [src]="video.url" autoplay>
+            <!-- <source *ngFor="let video of options.videos" src="{{video.url}}" type='{{video.mime}}' /> -->
+        </video>
+    </ng-container>
+    <ng-container *ngIf="video.source==Enums.VideoSourceType.Youtube">
+        <iframe allow="autoplay; encrypted-media" width="100%" height="{{mediaHeight}}" [src]="video.url" border="0">
+        </iframe>
+    </ng-container>
+</div>

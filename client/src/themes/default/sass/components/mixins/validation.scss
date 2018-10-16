@@ -1,0 +1,24 @@
+@mixin create_validation(){
+    &__invalid{
+        @include create_invalid_state("input");
+        @include create_invalid_state("textarea");
+    }
+}
+
+@mixin create_invalid_state($target){
+    & #{$target}{
+        background-image: url("images/error.png")!important;
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+        background-size: 24px 24px;
+        padding-right: 24px;
+        border:solid 1px red!important;
+    }
+    & #{$target}::-webkit-input-placeholder,
+    & #{$target}::-moz-placeholder,
+    & #{$target}:-moz-placeholder,
+    & #{$target}::-ms-input-placeholder,
+    {
+        color:red!important;
+    }
+}

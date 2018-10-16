@@ -1,0 +1,21 @@
+<ng-container *ngIf="display==ENUMS.FileSelectDisplayType.Inline">
+        <span class="{{cls}}" onclick="this.children[0].click();">
+                <input  class="{{cls+'__selector'}}" type="file" accept="{{accept}}" (change)="onChanged($event)">
+        </span>
+</ng-container>
+<ng-container *ngIf="display==ENUMS.FileSelectDisplayType.Form">
+        <div class="form-group row">
+                <label class="col-xs-12" [ngClass]="{
+                                        'control-label col-md-4 col-sm-4':direction==ENUMS.LayoutDirection.Horizontal, 
+                                        'col-md-12 col-sm-12':direction==ENUMS.LayoutDirection.Vertical
+                                }" for="first-name">
+                        {{labelText}}
+                </label>
+                <div class="col-xs-12" [ngClass]="{
+                                        'col-md-8 col-sm-8':direction==ENUMS.LayoutDirection.Horizontal, 
+                                        'col-md-12 col-sm-12':direction==ENUMS.LayoutDirection.Vertical
+                                }">
+                        <form-file-select accept="{{accept}}" (onFileSelected)="onNewFileSelected($event)"></form-file-select>
+                </div>
+        </div>
+</ng-container>

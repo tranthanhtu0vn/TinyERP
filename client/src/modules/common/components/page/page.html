@@ -1,0 +1,11 @@
+<div class="x_panel page">
+	<div class="x_title" *ngIf="hasTitle">
+		<h3 class="page-title title_right">
+			<ng-content select="page-header"></ng-content>
+		</h3>
+		<div class="clearfix"></div>
+	</div>
+	<div class="page-content x_content">
+		<ng-content select="page-content"></ng-content>
+	</div>
+</div>

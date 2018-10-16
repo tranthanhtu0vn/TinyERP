@@ -1,0 +1,114 @@
+{
+    "addOrUpdateAppSetting":{
+        "title":"Add/ Update App.Setting",
+        "category":"Group",
+        "key":"Key",
+        "inputKey":"Input key",
+        "value":"Value",
+        "inputvalue":"Input value",
+        "desc":"Description",
+        "inputDesc":"Input description",
+        "validation":{
+            "keyIsRequire":"Key was required field",
+            "keyAlreadyExisted":"item with \"{{APPSETTING.KEY}}\" was already existed. Please use another",
+            "keyShouldNotHaveWhiteSpace":"Key should not contain white-space"
+        }
+    },
+    "appSettings":{
+        "title":"Application Setting(s)",
+        "menuText":"Setting(s)",
+        "grid":{
+            "key":"Key",
+            "group":"Group",
+            "value":"Value",
+            "affectedDate":"Affected Date"
+        }
+    },
+    "authorizationReceiver":{
+        "title":"Authorization confirmation",
+        "type":"Provider",
+        "clientId":"Client Id",
+        "authorizationCode":"Authorization Code",
+        "message":"There is a request to update out local end point as below. Please have a look and confirm by click on \"Continue\" button.",
+        "remoteInfo":"Remote Information",
+        "itemNotFound":"Data was not found.",
+        "localInfo":"Local Info",
+        "validation":{
+            "authorizationCodeWasRequired":"Authorization code was required",
+            "invalidId":"Can not found resource with \"{{STORAGE.ID}}\" id."
+        }
+    },
+    "storages": {
+        "addNewAction": "Add New",
+        "title": "Storages",
+        "grid": {
+            "name": "Name",
+            "type":"Type",
+            "status": "Status",
+            "clientId": "Client Id",
+            "tenant":"Tenant",
+            "authority":"Authority",
+            "secret":"Secret",
+            "scope":"Scope",
+            "redirectUri":"Redirect Uri",
+            "extra":"Extra",
+            "actions":{
+                "getAccessToken":"Acc.Token",
+                "getAuthorize":"Auth.Code"
+            }
+        },
+        "updateAccessToken":{
+            "successNotificationTitle":"Access token was updated",
+            "successNotificationContent":"Access token for {{name}}({{key}}) was updated successfull."
+        }
+    },
+    "addOrUpdateStorage": {
+        "title": "Add Storage",
+        "name": "Name",
+        "inputName": "Please input name",
+        "key": "key",
+        "inputKey": "Please input key",
+        "tenant": "Tenant",
+        "inputTenant": "Please input Tenant",
+        "clientId":"Client ID",
+        "inputClientId":"Please input client id",
+        "secret":"Secret",
+        "inputSecret":"Please input secret",
+        "authority":"Authority",
+        "inputAuthority":"Please input value for authority",
+        "scope":"Scope",
+        "inputScope":"Please input scope",
+        "redirectUri":"Redirect Uri",
+        "inputRedirectUri":"Please input redirect-uri.",
+        "extra":"Extra",
+        "validation": {
+            "authorityIsRequire":"Authority was required field.",
+            "tenantIsRequire":"Tenant was required field",
+            "nameIsRequired": "Please input name",
+            "nameAlreadyExisted": "This name ({{STORAGE.NAME}}) was already existed. Please input another name",
+            "keyIsRequired": "Please input key",
+            "keyAlreadyExisted": "This key ({{STORAGE.KEY}}) is already existed. Please input another key",
+            "keyShouldNotHaveWhiteSpace": "The \"{{STORAGE.KEY}}\" key should not contain white-space",
+
+            "clientIdIsRequired": "Please input client-id",
+            "clientIdAlreadyExisted": "This client-id ({{STORAGE.CLIENT_ID}}) is already existed. Please input another",
+            "clientIdShouldNotHaveWhiteSpace": "The \"{{STORAGE.CLIENT_ID}}\" key should not contain white-space"
+        }
+    },
+    "parameters": {
+        "title": "Parameters",
+        "name": "Name",
+        "key": "Key",
+        "value": "Value",
+        "required": "Required",
+        "encoded": "Encoded",
+        "action": "Action",
+        "validation": {
+            "nameIsRequired": "Name is required",
+            "nameAlreadyExisted": "Name was already exsited",
+            "keyIsRequired": "Key is required",
+            "keyAlreadyExisted": "Key was already exsited",
+            "valueIsRequired": "Value is required"
+        }
+    }
+}

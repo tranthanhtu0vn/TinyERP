@@ -1,0 +1,11 @@
+<a href="#" onclick="return false;" title="{{text}}" (click)="onIconClicked($event)">
+    <ng-container *ngIf="iconUrl==''">
+        <i class="{{cls}}"></i>
+        <ng-container *ngIf="showText">
+            {{text}}
+        </ng-container>
+    </ng-container>
+    <ng-container *ngIf="iconUrl!=''">
+        <img src="{{iconUrl}}" alt="{{text}}">
+    </ng-container>
+</a>

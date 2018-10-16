@@ -1,0 +1,18 @@
+<form data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
+    <h3 *ngIf="title" class="text-center">{{title}}</h3>
+    <!-- <ng-content select="form-text-input"></ng-content>
+    <ng-content select="form-email-input"></ng-content>
+    <ng-content select="form-textarea"></ng-content>
+    <ng-content select="form-password-input"></ng-content>
+    <ng-content select="form-editor"></ng-content> -->
+    <ng-content></ng-content>
+    <div *ngIf="showBottomLine" class="ln_solid"></div>
+    <div class="form-group">
+        <div class="col-md-8 col-sm-8 col-xs-12 col-sm-offset-4 col-xs-offset-0 text-left">
+            <ng-content select="form-primary-button"></ng-content>
+            <ng-content select="form-default-link"></ng-content>
+            <ng-content select="form-button"></ng-content>
+            <ng-content select="form-default-button"></ng-content>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,10 @@
+<button data-toggle="dropdown" class="btn btn-default dropdown-toggle"
+	type="button" aria-expanded="false">
+        {{label}}
+        <span class="caret"></span>
+    </button>
+<ul role="menu" class="dropdown-menu">
+	<li *ngFor="let action of items" attr.data-key="{{action.key}}" (click)="onActionItemClicked(action)" onclick="return false;">
+		<a href="#">{{i18nHelper.resolve(action.key)}}</a>
+	</li>
+</ul>

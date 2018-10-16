@@ -1,0 +1,382 @@
+{
+  "common":{
+    "subscriptionStatus":{
+      "None":"None",
+      "Expired":"Expired",
+      "Activated":"Activated",
+      "WaitForApproval":"WaitForApproval",
+      "Rejected":"Rejected"
+    },
+    "invitationStatus":{
+      "None":"None",
+      "Joined":"Joined",
+      "SendEmail":"SendEmail",
+      "ResendEmail":"ResendEmail"
+    }
+  },
+  "students":{
+    "register":{
+      "validation":{
+        "invalidFirstName":"First name was invalid",
+        "invalidLastName":"Last name was invalid",
+        "invalidEmail":"Email was invalid",
+        "invalidPassword":"Invalid password",
+        "confirmPasswordWasRequired":"Confirm password was required",
+        "passwordDoesNotMatch":"Password and confirm password do not match.",
+        "emailWasUsed":"Email was already used",
+        "invalidInvitorCode":"Invalid invitor code"
+      }
+    },
+    "login":{
+      "invalidEmail":"There was not registered student with this email.",
+      "requireActivateAccount":"Please activate your student account.",
+      "contactAdminRequired":"There was some problem with your account. Please contact system administrator for more information."
+    }
+  },
+    "support":{
+      "qna":{
+        "title":"Frequently Question and Answer"
+      }
+    },
+    "pricingPlans":{
+      "tier1":{
+        "name":"Tier 1"
+      },
+      "tier2":{
+        "name":"Tier 2"
+      },
+      "tier3":{
+        "name":"Tier 3"
+      },
+      "tier4":{
+        "name":"Tier 4"
+      },
+      "tier5":{
+        "name":"Tier 5"
+      }
+    },
+    "account": {
+        "profile": {
+            "title": "Account Profile Information",
+            "fullName": "FullName",
+            "email": "Email",
+            "password": "Password",
+            "invitationLink":"Invitation link",
+            "bonusPoint":"Referal bonus (point)",
+            "commands": {
+                "logout": "Log Out"
+            },
+            "invitations":{
+              "title":"Invitations",
+              "inviteNewFriend":"Invite friend",
+              "fullName":"Name",
+              "firstName":"First name",
+              "lastName":"Last name",
+              "email":"Email",
+              "status":"Status",
+              "joinDate":"Date",
+              "resendEmail":"Resend",
+              "inviteFriend":{
+                "title":"Invitations / Invite friend",
+                "invalidEmail":"Invalid email",
+                "lastNameIsRequired":"Last name was required",
+                "firstNameIsRequired":"First name was required"
+              }
+            },
+            "subscriptions":{
+              "title":"Subscriptions",
+              "from":"From",
+              "to":"To",
+              "points":"Est. point(s)",
+              "pointsPattern":"{0} point(s) per {1} days",
+              "status":"Status",
+              "noData":"There was not subscription.",
+              "addSubscription":{
+                  "title":"Subscriptions / Add subscription",
+                  "invalidAuth":"Invalid request",
+                  "fromShouldNotLessThanToday":"From date can not be less than today",
+                  "fromShouldLessThanTo":"'From' date should less than 'To' date",
+                  "invalidMinDaysPerPeriod":"Subscription should not be less than '{{SUBSCRIPTION.MIN_DAYS_PER_PERIOD}}' day(s)."
+              },
+              "activate":{
+                "invalidAuth":"Invalid request",
+                "accountWasNotActivated":"Please activate your account.",
+                "invalidSubscriptionId":"Invalid subscription.",
+                "subscriptionWasActivated":"Subscription was already activated.",
+                "invalidPoint":"Your account currently have {{STUDENT.POINT}} point(s) and your subscription needs {{SUBSCRIPTION.POINT}} point(s)",
+                "startDateLessThanCurrentDate":"Start date of current subscription less than current date. Please create the new one."
+              }
+            },
+            "course":{
+              "preview":{
+                "warningMessage":"This course was being in preview mode. Some functions of page were not worked properly."
+              }
+            },
+            "myProfile": "My Profile",
+            "watchedCourses": {
+                "title": "Watched course(s)",
+                "nodata": "there is no course."
+            },
+            "subscribedCourses": {
+                "title": "Subscribed course(s)",
+                "nodata": "there is no course."
+            },
+            "myCourses": {
+                "title": "My course(s)",
+                "nodata": "There is no course. Let create the first one.",
+                "addNewCourse": "Add new course",
+                "back": "Back"
+            },
+            "audience": {
+                "title": "Target Audience"
+            },
+          "addOrEditCourse": {
+            "publishCourseLecture":{
+              "invalidCourse":"Invalid course",
+              "lectureNotFound":"Lecture was not found",
+              "lectureWasPublished":"Lecture was published already",
+              "videoWasRequired":"Video was re quired for this lecture"
+            },
+            "approve":{
+              "approveButtonText":"Approve",
+              "courseWasApproved":"Course was approved",
+              "invalidCourse":"Invalid course",
+              "courseAlreadyApproved":"Course was already approved."
+            },
+            "validation":{
+              "invalidCourse":"Invalid course."
+            },
+            "requestForApproval":{
+              "courseWasReadyForApproval":"Course was ready for your approval. Please approve.",
+              "title":"Submit for review",
+              "previewButtonText":"Preview",
+              "submitButtonText":"Submit for review",
+              "warningMessage":"WARNING: Once you set your course URL it CANNOT BE CHANGED",
+              "noteMessage":"NOTE: When you press the button below, the Udemy team will begin the review process. Upon completion, students will be able to enroll in your course at your current price: {{price}}",
+              "invalidCourse":"Invalid course.",
+              "titleWasRequired":"Title was required",
+              "subtitleWasRequired":"'{{COURSE_TITLE}}' course: SubTitle was required",
+              "descriptionWasRequired":"'{{COURSE_TITLE}}' course: Description was required",
+              "descriptionUnderlimitted":"'{{COURSE_TITLE}}' course: Description was shorter than limitted at {{MIN_DESCRIPTION_LENGTH}} letter(s).",
+              "priceWasRequired":"'{{COURSE_TITLE}}' course: Please set the price.",
+              "wwlUnderLimitted":"'{{COURSE_TITLE}}' course was required to have at-least {{MIN_WHATWILLLEARN_PER_COURSE}} items in 'WhatWillLearn' part. Please add more.",
+              "requirementUnderLimitted":"'{{COURSE_TITLE}}' course was required to have at-least {{MIN_REQUIREMENT_PER_COURSE}} items in 'Requirement' part. Please add more.",
+              "audienceUnderLimitted":"'{{COURSE_TITLE}}' course was required to have at-least {{MIN_AUDIENCE_PER_COURSE}} items in 'Audience' part. Please add more.",
+              "targetUnderLimitted":"'{{COURSE_TITLE}}' course was required to have at-least {{MIN_TARGET_PER_COURSE}} items in 'Target(s)' part. Please add more.",
+              "landingPhotoWasRequired":"'{{COURSE_TITLE}}' course: Please update landing photo.",
+              "landingVideoWasRequired":"'{{COURSE_TITLE}}' course: Please update landing video.",
+              "sectionUnderLimitted":"'{{COURSE_TITLE}}' course was required to have at-least {{MIN_SECTION_PER_COURSE}} items in 'Section(s)' part. Please add more.",
+              "lectureUnderLimitted":"'{{COURSE_TITLE}}' course was required to have at-least {{MIN_LECTURE_PER_COURSE}} items in 'Lecture(s)' part. Please add more.",
+              "sectionWithoutLecture":"'{{COURSE_TITLE}}' course: <strong>'{{SECTION_NAME}}'</strong> section did not have any lecture. Please add lecture(s) for this section.",
+              "courseAlreadyApproved":"'{{COURSE_TITLE}}' course was already approved."
+            },
+            "price":{
+              "title":"Pricing",
+              "selectPricingPlan":"Please select pricing plan for your course and click on 'Save'.",
+              "shortDesc":"Please select the price tier for your course below and click 'Save'. The list price that students will see in other currencies is calculated using the price tier matrix, based on the tier that it corresponds to."
+            },
+            "targets": {
+              "title": "Target(s)",
+              "addNew": "Add new",
+              "noData": "There was no data was found.",
+              "enterName": "Please enter name of target.",
+              "invalidName": "Name was invalid.",
+              "deleteTarget": {
+                "invalidItemId": "Requested data was invalid."
+              },
+              "updateTarget": {
+                "invalidItemId": "Requested data was invalid.",
+                "nameWasExisted": "This target was already existed. Please select another."
+              },
+              "addTarget": {
+                "nameWasRequired": "Please enter name of target",
+                "nameWasAlreadyExsited": "This target was already existed. Please select another."
+              }
+            },
+            "audiences": {
+              "title": "Target Audience(s)",
+              "addNew": "Add new",
+              "noData": "There was no data was found.",
+              "enterName": "Please enter name of target audience.",
+              "invalidName": "Name was invalid.",
+              "deleteAudience": {
+                "invalidItemId": "Requested data was invalid."
+              },
+              "updateAudience": {
+                "invalidItemId": "Requested data was invalid.",
+                "nameWasExisted": "This target audience was already existed. Please select another."
+              },
+              "addAudience": {
+                "nameWasRequired": "Please enter name of target audience",
+                "nameWasAlreadyExsited": "This target audience was already existed. Please select another."
+              }
+            },
+            "whatWillLearns": {
+              "title": "What will learn",
+              "addNew": "Add new",
+              "noData": "There was no data.",
+              "invalidName": "Name was invalid",
+              "enterName": "Please enter name of WhatWillLearn.",
+              "deleteWhatWillLearn": {
+                "invalidItemId": "Requested data was invalid"
+              },
+              "updateWhatWillLearn": {
+                "invalidItemId": "Requested data was invalid",
+                "nameExisted": "Value was already existed. Please select another."
+              },
+              "addWhatWillLearn": {
+                "valueWasRequired": "This was required field",
+                "valueAlreadyExsited": "Value was already existed. Please select another."
+              }
+            },
+            "requirements": {
+              "title": "Requirements",
+              "addNewRequirement": "Add Requirement",
+              "noData": "Requiremnt for this course was not found.",
+              "enterNameOfRequirement": "Enter name of requirement",
+              "invalidRequirementName": "Name of requirement was invalid. Please check again.",
+              "addRequirement": {
+                "valueWasRequired": "Requested data was invalid",
+                "valueAlreadyExsited": "Value was already existed. Please select another."
+              },
+              "deleteRequriement": {
+                "invalidRequirementId": "Requested data was invalid"
+              },
+              "updateRequriement": {
+                "invalidRequirementId": "Requested data was invalid",
+                "nameAlreadyExisted": "Value was already existed. Please select another."
+              }
+            },
+            "overview": {
+              "courseId":"Course Id",
+              "title": "Overview",
+              "courseTitle": "Title",
+              "inputTitle": "Input title",
+              "subtitle": "Sub title",
+              "inputSubTitle": "Input subtitle",
+              "description": "Description",
+              "inputDescription": "Please input description of course",
+              "inputUrl":"Course Url",
+              "url":"Url",
+              "urlCanNotBeChangedWarning":"PAY ATTENTION PLEASE:Url of course can not be change if set",
+              "validation":{
+                "urlWasExisted":"Url was already existed",
+                "urlWasInvalid":"Url was invalid",
+                "titleWasRequired":"Title was required",
+                "titleWasExisted":"Title was already existed. Please select another.",
+                "subtitleWasRequired":"Subtitle was required",
+                "descriptionWasRequired":"Description was required",
+                "descriptionWasUnderLimitted":"Description was required to have more than {MIN_DESCRIPTION_LENGTH} letter(s)."
+              }
+            },
+            "landingPhoto": {
+              "title": "Landing Page",
+              "inputYoutubeVideo":"Inout youtube video id",
+              "photoDescription": "Make your course stand out with a great image from our design team based on your preferences and style. Get your free image.<br/>If you create your image, it must meet our course image quality standards to be accepted.<br/><strong>Important guidelines: 750x422 pixels; .jpg, .jpeg,. gif, or .png. no text on the image.<strong>",
+              "videoDescription": "Students who watch a well-made promo video are 5X more likely to enroll in your course. We've seen that statistic go up to 10X for exceptionally awesome videos. Learn how to make yours awesome!"
+            },
+            "lectures":{
+              "lecturePrefix":"Lecture: ",
+              "others":"Others",
+              "noData":"There was not lecture(s) for this section.",
+              "enterName":"Enter name of lecture",
+              "validation":{
+                "invalidLecture":"Invalid request. Please contact your system administrator.",
+                "nameAlreadyExsited":"Lecture with this name was already existed. Please select another.",
+                "nameIsRequied":"Name for this lecture was required."
+              },
+              "generateSEOUri":{
+                "invalidRequest":"Invalid generate seo uri request"
+              }
+            },
+            "lectureVideos":{
+              "seoUri":"SEO Uri",
+              "generateSEOUri":"Generate SEO",
+              "regenerateSEOUri":"re.Gen",
+              "title":"Video",
+              "youtubeVideo":"Youtube Video",
+              "inputYoutubeVideo":"Please input ID of your youtube video."
+            },
+            "sections":{
+              "enableSectionSort":"Enable sort section(s)",
+              "enableLectureSort":"Enable sort lecture(s)",
+              "sectionPrefix":"Section: ",
+              "addLecture":"Add lecture",
+              "enterNameOfSection":"Please enter name of section.",
+              "title":"Curriculumn",
+              "noData":"There was no section(s) for this course. Please add the first section.",
+              "addSectionCommand":"Add section",
+              "validation":{
+                "invalidSection":"Invalid request. Please contact your system administrator.",
+                "sectionAlreadyExsited":"Section with this name was already existed. Please select another.",
+                "nameIsRequied":"Name for this section was required.",
+                "lectureShouldBeEmpty":"Please manual remove all of lectures for this section before deleting it."
+              }
+            }
+          }
+        },
+        "activate": {
+            "activateSuccessTitle": "Activation was successful",
+            "activatingMessage": "Your account was being activating. Please wait for a moment.",
+            "activateMessage": "Dear \"{{firstName}} {{lastName}}\",<br/>Your account was activated succesfully. Please login and improve your skills.<br/>Regards,<br/>Management Team.<br/>"
+        },
+        "register": {
+            "formTitle": "Register new account",
+            "registerSuccessMessage": "Dear \"{{firstName}} {{lastName}}\",<br/>Congratulation, You have been successful registering an an account.<br/>The activation email was sent to  <strong>'{{email}}'</strong>.Please check your email and follow the instruction to activate your account.<br/> Regards, <br/>Management Team",
+            "registerSuccessTitle": "Registration successful"
+        }
+    },
+    "courses": {
+        "noItem": "There is no item was found",
+        "searchNotFound": "No item was found with '{0}' keyword. Please try with other keyword."
+
+    },
+    "security": {
+        "login": "Sign In"
+    },
+    "watchCourse": {
+        "toc": {
+            "title": "Content of Course"
+        }
+    },
+    "courseOverview": {
+        "subscribe":{
+          "successNotificationTitle":"",
+          "successNotificationContent":"Thank for subscribing this course.",
+          "errorNotificationTitle":"Fail to subscribe this course",
+          "courseWasAlreadySubscribed":"We regconized that you already subscribe this course."
+        },
+        "detailHeader": {
+            "createdBy": "Created by",
+            "profileLinkTitle": "see profile of",
+            "lastUpdated": "Last updated:",
+            "language": "Language:",
+            "tags": "Tags:"
+        },
+        "preview": {
+            "buyNow": "Watch now",
+            "moneyBackGruarantee": "30-Day Money-Back Guarantee",
+            "includes": "Includes:",
+            "includeOnDemandVideo": "1 hour on-demand video",
+            "includeFullLifetimeAccess": "Full lifetime access",
+            "includeAccessOnTV": "Access on TV",
+            "includeAccessOnMobile": "Access on mobile",
+            "includeCertificateOfCompletion": "Certificate of Completion"
+        },
+        "whatWillWeLearn": {
+            "sectionTitle": "What will we learn?"
+        },
+        "requirement": {
+            "sectionTitle": "Requirement"
+        },
+        "description": {
+            "sectionTitle": "Description"
+        },
+        "audience": {
+            "sectionTitle": "Who is the target audience?"
+        },
+        "curriculumn": {
+            "sectionTitle": "Curriculum For This Course"
+        }
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "addOrUpdateCategory":{
+        "title": "Add Category",
+        "name": "Name",
+        "inputName": "Please input name",
+        "key": "key",
+        "inputKey": "Please input key",
+        "desc": "Description",
+        "inputDesc": "Please input description",
+        "validation": {
+            "nameIsRequired": "Please input name",
+            "nameAlreadyExisted": "This name is already existed. Please input another name",
+            "keyIsRequired": "Please input key",
+            "keyAlreadyExisted": "This key is already existed. Please input another key",
+            "keyShouldNotHaveWhiteSpace": "The key should not have white space"
+        }
+    },
+    "categories":{
+        "title":"Categories",
+        "addNewAction":"New Category",
+        "grid":{
+            "name":"Name",
+            "key":"Key",
+            "description":"Description"
+        }
+    },
+    "supportItems":{
+        "title":"Support Items",
+        "addNewAction":"New Item",
+        "grid":{
+            "name":"Name",
+            "key":"Key",
+            "description":"Description",
+            "category":"Category"
+        }
+    },
+    "addOrUpdateSupportItem":{
+        "title": "Add SupportItem",
+        "itemTitle": "Title",
+        "inputTitle": "Please input title",
+        "key": "key",
+        "inputKey": "Please input key",
+        "desc": "Description",
+        "inputDesc": "Please input description",
+        "validation": {
+            "titleIsRequired": "Please input title",
+            "titleAlreadyExisted": "This title is already existed. Please input another name",
+            "keyIsRequired": "Please input key",
+            "keyAlreadyExisted": "This key is already existed. Please input another key",
+            "keyShouldNotHaveWhiteSpace": "The key should not have white space"
+        }
+    }
+}

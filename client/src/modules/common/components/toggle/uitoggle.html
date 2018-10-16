@@ -1,0 +1,57 @@
+<a title="{{text}}" (click)="onButtonClicked($event)" href="#" onclick="return false;" class="{{cls}}">
+    <ng-container *ngIf="type==ENUMS.ToggleType.PlusMinus">
+        <i *ngIf="state!==ENUMS.ToggleState.Expand" class="" [ngClass]="{
+            'icon-collapse--white': color==ENUMS.Color.White,
+            'icon-collapse': color==ENUMS.Color.Default,
+            'icon-2x': size==ENUMS.IconSize.Large
+        }"></i>
+        <i *ngIf="state==ENUMS.ToggleState.Expand" class="icon-2x" [ngClass]="{
+            'icon-expand--white': color==ENUMS.Color.White,
+            'icon-expand': color==ENUMS.Color.Default,
+            'icon-2x': size==ENUMS.IconSize.Large
+        }"></i>
+    </ng-container>
+
+    <ng-container *ngIf="type==ENUMS.ToggleType.Video">
+        <i *ngIf="state==ENUMS.VideoToggleState.Play" class="icon-2x" [ngClass]="{
+            'icon-pause--white': color==ENUMS.Color.White,
+            'icon-pause': color==ENUMS.Color.Default,
+            'icon-2x': size==ENUMS.IconSize.Large
+        }"></i>
+        <i *ngIf="state!==ENUMS.VideoToggleState.Play" class="icon-2x" [ngClass]="{
+            'icon-play--white': color==ENUMS.Color.White,
+            'icon-play': color==ENUMS.Color.Default,
+            'icon-2x': size==ENUMS.IconSize.Large
+        }"></i>
+    </ng-container>
+    <ng-container *ngIf="type==ENUMS.ToggleType.List">
+        <i class="icon-2x" [ngClass]="{
+            'icon-list--white': color==ENUMS.Color.White,
+            'icon-list': color==ENUMS.Color.Default,
+            'icon-2x': size==ENUMS.IconSize.Large
+        }"></i>
+    </ng-container>
+    <ng-container *ngIf="type==ENUMS.ToggleType.Check">
+            <i *ngIf="state==ENUMS.ToggleState.Check" class="icon-check"></i>
+            <i *ngIf="state==ENUMS.ToggleState.UnCheck" class="icon-uncheck"></i>
+    </ng-container>
+    <ng-container *ngIf="type==ENUMS.ToggleType.ActiveOrInActive">
+        <i 
+            *ngIf="state==ENUMS.ActiveOrInActiveToggleState.Active" 
+            class="icon-active"
+            [ngClass]="{
+                'icon-2x': size==ENUMS.IconSize.Large,
+                'icon-x': size==ENUMS.IconSize.Small
+            }"
+        ></i>
+        <i 
+            *ngIf="state!=ENUMS.ActiveOrInActiveToggleState.Active" 
+            class="icon-inactive"
+            [ngClass]="{
+                'icon-2x': size==ENUMS.IconSize.Large,
+                'icon-x': size==ENUMS.IconSize.Small
+            }"
+        ></i>
+    </ng-container>
+    {{text}}
+</a>

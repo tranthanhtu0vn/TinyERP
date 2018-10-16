@@ -1,0 +1,7 @@
+<div class="{{cls}}" [ngClass]="{
+        'alert alert-danger':type==ENUMS.AlertType.Danger,
+        'alert alert-success':type==ENUMS.AlertType.Success,
+        'alert alert-warning':type==ENUMS.AlertType.Warning
+    }">
+    <ng-content></ng-content>
+</div>

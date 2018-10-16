@@ -1,0 +1,10 @@
+<ng-container *ngIf="!!isAuthenticated">
+        <a href="#" onclick="return false;" (click)="onProfileClicked();" title="{{userProfile.fullName}}" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <img src="{{avatarUrl}}" alt="{{userProfile.fullName}}">
+            </a>
+    </ng-container>
+    <!-- <ng-container *ngIf="!isAuthenticated">
+        <a class="icon-login" (click)="onLoginClicked()" href="#" onclick="return false;" title="Sign in">
+            {{i18n.default.common.signIn}}
+        </a>
+    </ng-container> -->

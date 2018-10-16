@@ -1,0 +1,25 @@
+<div class="form-group row">
+        <label *ngIf="noLabel==false" class="col-xs-12" [ngClass]="{
+                    'control-label col-md-4 col-sm-4':direction==ENUMS.LayoutDirection.Horizontal, 
+                    'col-md-12 col-sm-12':direction==ENUMS.LayoutDirection.Vertical
+                }" for="first-name">
+            {{labelText}}
+        </label>
+        <div class="col-xs-12" [ngClass]="{
+                    'col-md-8 col-sm-8':direction==ENUMS.LayoutDirection.Horizontal && noLabel==false, 
+                    'col-md-12 col-sm-12':direction==ENUMS.LayoutDirection.Vertical || noLabel==true
+                }">
+                <ng-container *ngIf="readOnly==true">
+                    <span>{{model}}</span>
+                </ng-container>
+                <select *ngIf="readOnly==false" (change)="onValueChanged($event);" class="form-control">
+                    <option 
+                        *ngFor="let item of items" 
+                        value="{{item.value}}"
+                        [selected]="item.value==model"
+                        >
+                            {{item.text}}
+                    </option>
+                </select>
+        </div>
+    </div>

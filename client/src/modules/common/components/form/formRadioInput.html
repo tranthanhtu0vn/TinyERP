@@ -1,0 +1,14 @@
+<div class="form-check">
+    <input 
+        class="form-check-input" 
+        [disabled]="readOnly==true" 
+        [checked]="isSelected==true" 
+        (change)="onChanged($event)" 
+        type="{{type}}" 
+        id="ctr_{{id}}" 
+        name="{{name}}" 
+        [value]="value">
+    <label class="form-check-label" for="ctr_{{id}}">
+        {{text}}
+    </label>
+</div>

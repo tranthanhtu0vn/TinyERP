@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<base href="/">
+	<title>Learn In Action</title>
+	<link rel="shortcut icon" href="/src/resources/images/baby_book.png" />
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Angular,TypeScript,Enterprise Application">
+	<meta name="author" content="TU Tran (http://tranthanhtu.vn)">
+	<link href="/src/resources/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/src/resources/css/base.css" rel="stylesheet" />
+</head>
+
+<body>
+	<span id="icon-loading" class="icon-loading"></span>
+	<layout></layout> 
+	
+	<script src="src/resources/js/jsextension.js"></script>
+	<script src="node_modules/core-js/client/shim.min.js"></script>
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+	<script src="node_modules/reflect-metadata/reflect.js"></script>
+	<script src="/src/resources/libs/jquery/jquery-1.12.4.js"></script>
+	<script src="node_modules/zone.js/dist/zone.js"></script>
+	<script src="/src/resources/js/common.js"></script>
+	<script src="systemjs.conf.js"></script>
+	<!-- <script src="libs/angular.js"></script>
+		<script src="libs/rxjs.js"></script>
+	<script src="src/modules/common/index.js"></script>
+	<script src="src/main.js"></script> -->
+	<script>
+		/*PROD*/
+		window.APP_NAME = "dashboard";
+		window.System = System;
+		var APP_PATTERN="@app/apps/{0}";
+		Promise.all([
+			System.import("/src/resources/data/html-templates.json"),
+			System.import("/src/main"),
+			System.import(String.format(APP_PATTERN, window.APP_NAME))
+		]).then(function (args) {
+			var htmlTempaltes = args[0];
+			var main = args[1].default;
+			var AppConstruct = args[2].Application;
+			var appConfig = args[2].default;
+			main.start(htmlTempaltes, AppConstruct, appConfig);
+		}).catch(function (error) { console.log(error); });
+	</script>
+
+<script src="src/themes/default/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="src/themes/default/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="src/themes/default/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="src/themes/default/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="src/themes/default/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script src="src/themes/default/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="src/themes/default/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="src/themes/default/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<script src="src/themes/default/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+<script src="src/themes/default/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="src/themes/default/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+<script src="src/themes/default/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+.icon-loading{
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-loading:before {
+  content: ""; }
+
+.icon-loading {
+  z-index: 9990;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #333;
+  opacity: 0.5; }
+  .icon-loading:before {
+    position: absolute;
+    z-index: 9999;
+    font-size: 7em;
+    animation-name: spinner;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    color: white; }
+    @keyframes spinner {
+        from {
+          transform: none; }
+        to {
+          transform: rotate(360deg); } }
+/* for toaster notification */
+.toast-title {
+  color: #FFFFFF!important;
+}
+.toast-message {
+  color: #FFFFFF!important;
+}

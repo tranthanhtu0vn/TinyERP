@@ -1,0 +1,21 @@
+{
+    "customers": {
+        "addNewAction": "Add New",
+        "title": "Customers",
+        "customerId":"Customer ID",
+        "name":"Name",
+        "location":"Location",
+        "createdDate":"Created Date"
+    },
+    "addOrUpdateCustomer":{
+        "title":"Add Customer",
+        "name":"Name",
+        "inputName":"Please input name of Customer",
+        "location":"Location",
+        "inputLocation":"Please enter location of Customer",
+        "validation":{
+            "nameIsRequired":"Name of Customer is required",
+            "nameAlreadyExisted":"Name for this Customer was already existed. Please select another."
+        }
+    }
+}

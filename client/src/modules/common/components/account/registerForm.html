@@ -1,0 +1,25 @@
+<horizontal-form [title]="title">
+    <form-text-input *ngIf="mode==ENUMS.RegistrationMode.Invitation" [labelText]=i18n.security.account.register.invitor [readOnly]="true"[model]=model.invitor></form-text-input>
+    <form-text-input [labelText]=i18n.security.account.register.firstName [placeHolderText]=i18n.security.account.register.inputFirstName
+        [validation]="['security.account.register.validation.firstNameIsRequired']" [(model)]=model.firstName></form-text-input>
+    <form-text-input [labelText]=i18n.security.account.register.lastName [placeHolderText]=i18n.security.account.register.inputLastName
+        [validation]="['security.account.register.validation.lastNameIsRequired']" [(model)]=model.lastName></form-text-input>
+    <form-email-input [labelText]=i18n.security.account.register.email [placeHolderText]=i18n.security.account.register.inputEmail
+        [validation]="['security.account.register.validation.invalidEmail', 'security.account.register.validation.emailWasUsed']"
+        [(model)]=model.email></form-email-input>
+    <form-password-input 
+        [labelText]=i18n.security.account.register.password 
+        [placeHolderText]=i18n.security.account.register.inputPassword
+        [validation]="['security.account.register.validation.invalidPassword', 'security.account.register.validation.passwordDoesNotMatch']" 
+        [(model)]=model.password>
+    </form-password-input>
+    <form-password-input 
+        [labelText]=i18n.security.account.register.confirmPassword 
+        [placeHolderText]=i18n.security.account.register.inputPassword
+        [validation]="['security.account.register.validation.passwordDoesNotMatch', 'security.account.register.validation.confirmPasswordWasRequired']" 
+        [(model)]=model.confirmPassword>
+    </form-password-input>
+
+    <form-primary-button (onClick)="onRegisterClicked($event)" [label]="i18n.security.account.register.register"></form-primary-button>
+    <form-button (onClick)="onCancelClicked($event)" [label]="i18n.security.account.register.cancel"></form-button>
+</horizontal-form>

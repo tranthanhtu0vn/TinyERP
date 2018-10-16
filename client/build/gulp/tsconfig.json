@@ -1,0 +1,38 @@
+{
+    "baseUrl": ".",
+    "rootDir": "../../",
+    "target": "es6",
+    "module": "system",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "paths": {
+        "@app/apps/dashboard": ["src/apps/dashboard/index"],
+        "@app/apps/learning": ["src/apps/learning/index"],
+        "@app/themes/education": [
+            "src/themes/education/index"
+        ],
+        "@app/common": [
+            "src/modules/common/index"
+        ],
+        "@app/security": [
+            "src/modules/security/index"
+        ],
+        "@app/security/share": [
+            "src/modules/security/share"
+        ],
+        "@app/themes/default": [
+            "src/themes/default/index"
+        ],
+        "@app/customerManagement": [
+            "src/modules/customerManagement/index"
+        ]
+    },
+    "exclude": [
+        "src/themes/default/vendors/devbridge-autocomplete/src/jquery.autocomplete.d.ts"
+    ]
+}

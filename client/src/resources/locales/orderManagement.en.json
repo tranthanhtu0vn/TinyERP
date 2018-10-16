@@ -1,0 +1,12 @@
+{
+    "orders": {
+        "title": "Order Management",
+        "grid": {
+            "orderId": "OrderId",
+            "name":"Customer",
+            "createdDate": "Created Date",
+            "totalItems": "Total Item(s)",
+            "totalPrice": "Total Price"
+        }
+    }
+}

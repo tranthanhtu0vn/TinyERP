@@ -1,0 +1,23 @@
+{
+    "errors": [],
+    "data": [
+        {
+            "id": "1",
+            "key": "key",
+            "name": "name",
+            "description": "this is short description"
+        },
+        {
+            "id": "1",
+            "key": "Key 1",
+            "name": "name",
+            "description": "this is short description"
+        },
+        {
+            "id": "1",
+            "key": "key 2",
+            "name": "name",
+            "description": "this is short description"
+        }
+    ]
+}

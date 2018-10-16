@@ -1,0 +1,5 @@
+@import "./mixins/validation";
+
+.validation{
+    @include create_validation();
+}

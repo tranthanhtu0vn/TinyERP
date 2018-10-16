@@ -1,0 +1,6 @@
+<ng-container *ngIf="type==ENUMS.CopyableComponentType.Text">
+    <span #content>
+        <ng-content></ng-content>
+    </span>
+    <icon-copy [showText]="true" [text]="i18n.common.icons.copy" (onClicked)="onCopyClicked($event)"></icon-copy>
+</ng-container>
