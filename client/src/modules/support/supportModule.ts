@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {FormsModule} from "@angular/forms";
-import { AppCommon, BaseModule, ModuleConfig, ModuleNames,IGenericEventManager, OnModuleLoaded, BaseEvent, IoCNames } from "@app/common";
+import { AppCommon, BaseModule, ModuleConfig, ModuleNames } from "@app/common";
 import {SupportRoute} from "./supportRoute";
 import ioc from "./_share/config/ioc";
 import routes from "./_share/config/routes";
@@ -15,10 +15,6 @@ import mainMenus from "./_share/config/mainMenus";
 export class SupportModule extends BaseModule {
     constructor() {
         super(new ModuleConfig(ModuleNames.Support, ioc, routes));
-    }
-    protected onLoaded(): void {
-        let genericEventManager: IGenericEventManager = window.ioc.resolve(IoCNames.IGenericEventManager);
-        let onModuleLoaded: BaseEvent = new OnModuleLoaded(ModuleNames.Support, mainMenus);
-        genericEventManager.publish(onModuleLoaded);
+        this.mainMenus=mainMenus;
     }
 }
