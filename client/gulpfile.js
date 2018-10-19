@@ -142,18 +142,6 @@ gulp.task("bundle:js", function () {
             src: 'src/modules/common/**/*.js',
             outputFile: bundleFolder + "modules/common/index.js",
             externals: ["rxjs", "@angular/core", "@angular/common", "@angular/compiler", "@angular/platform-browser", "@angular/platform-browser-dynamic", "@angular/http", "@angular/router", "@angular/forms"]
-        }, {
-            src: 'src/modules/security/**/*.js',
-            outputFile: bundleFolder + "modules/security/securityModule.js",
-            externals: ["@app/common", "rxjs", "@angular/core", "@angular/common", "@angular/compiler", "@angular/platform-browser", "@angular/platform-browser-dynamic", "@angular/http", "@angular/router", "@angular/forms"]
-        },{
-            src: 'src/modules/setting/**/*.js',
-            outputFile: bundleFolder + "modules/setting/settingModule.js",
-            externals: ["@app/common", "rxjs", "@angular/core", "@angular/common", "@angular/compiler", "@angular/platform-browser", "@angular/platform-browser-dynamic", "@angular/http", "@angular/router", "@angular/forms"]
-        },{
-            src: 'src/modules/auth/**/*.js',
-            outputFile: bundleFolder + "modules/auth/authModule.js",
-            externals: ["@app/common", "rxjs", "@angular/core", "@angular/common", "@angular/compiler", "@angular/platform-browser", "@angular/platform-browser-dynamic", "@angular/http", "@angular/router", "@angular/forms"]
         },{
             src: 'src/modules/support/**/*.js',
             outputFile: bundleFolder + "modules/support/supportModule.js",

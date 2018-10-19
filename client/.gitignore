@@ -2,6 +2,7 @@ dist/**/*.*
 src/**/*.d.ts
 src/**/*.js.map
 src/**/*.js
+dist
 npm-debug.log.*
 !src/resources/**/*.*
 !src/themes/default/vendors/**/*.*
