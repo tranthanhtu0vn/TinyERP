@@ -21,7 +21,7 @@ let appConfig: IAppConfig = {
     defaultUrl: "/dashboard",
     settings: settings,
     deployment: {
-        mode: DeploymentMode.PROD /*use DeploymentMode.PROD in production deployment*/
+        mode: DeploymentMode.DEV /*use DeploymentMode.PROD in production deployment*/
     },
     htmlTemplatePath: "src/resources/html-templates.json",
     themes: themes,
