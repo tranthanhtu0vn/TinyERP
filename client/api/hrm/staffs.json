@@ -1,0 +1,11 @@
+{
+    "errors":[],
+    "status":"200",
+    "data":{
+        "totalItems":"2",
+        "items":[
+            {"firstName":"Tu", "lastName":"Tran", "department":"Department 1"},
+            {"firstName":"Tu1", "lastName":"Tran", "department":"Department 1"}
+        ]
+    }
+}

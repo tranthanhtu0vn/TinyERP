@@ -72,7 +72,8 @@ export const ModuleNames = {
     Learning: "learning",
     LearningDashboard:"learningDashboard",
     Support:"support",
-    Auth:"auth"
+    Auth:"auth",
+    HRM:"hrm"
 };
 
 export const AppThemeType = {

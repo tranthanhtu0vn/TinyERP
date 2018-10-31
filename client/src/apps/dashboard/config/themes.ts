@@ -5,7 +5,8 @@ let themes: Array<ITheme> = [
         isDefault:true,
         urlPrefix: AppThemeType.Default, 
         modules: [
-            {name: ModuleNames.Support, isDefault:true}
+            {name: ModuleNames.Support, isDefault:true},
+            {name:ModuleNames.HRM}
         ]
     }
 ];

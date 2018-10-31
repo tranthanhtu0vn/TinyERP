@@ -1,9 +1,9 @@
 import { IRouteService } from "./services/irouteService";
 import { IoCNames } from "./ioc/enum";
 import { ModuleConfig } from "./models/moduleConfig";
-import {IGenericEventManager} from "./event/ieventManager";
-import {BaseEvent} from "./event/baseEvent";
-import {OnModuleLoaded} from "./event/onModuleLoaded";
+import { IGenericEventManager } from "./event/ieventManager";
+import { BaseEvent } from "./event/baseEvent";
+import { OnModuleLoaded } from "./event/onModuleLoaded";
 
 export class BaseModule {
     protected mainMenus: any;
@@ -14,6 +14,7 @@ export class BaseModule {
         this.name = config.name;
         this.registerIoC(config.ioc);
         this.registerModuleRoutes(config.routes);
+        this.mainMenus = config.menus;
         this.registerModuleEvents();
         this.onLoaded();
     }
@@ -22,7 +23,7 @@ export class BaseModule {
         let onModuleLoaded: BaseEvent = new OnModuleLoaded(this.name, this.mainMenus);
         genericEventManager.publish(onModuleLoaded);
     }
-    protected registerModuleEvents(){}
+    protected registerModuleEvents() { }
     protected registerIoC(ioc: Array<any>) {
         window.ioc.import(ioc);
     }

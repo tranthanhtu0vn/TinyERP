@@ -120,7 +120,7 @@
 
 		<!-- page content -->
 		<div class="right_col" role="main">
-			<router-outlet [notification]="{position: ENUMS.LayoutPosition.BottomRight}"></router-outlet>
+			<router-outlet (activate)="onComponentActivated($event)" [notification]="{position: ENUMS.LayoutPosition.BottomRight}"></router-outlet>
 		</div>
 		<!-- /page content -->
 
