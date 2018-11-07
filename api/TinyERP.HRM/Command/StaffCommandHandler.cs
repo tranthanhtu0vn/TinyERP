@@ -1,6 +1,5 @@
 ﻿namespace TinyERP.HRM.Command
 {
-    using System;
     using TinyERP.Common.Command;
     using Staff;
     using Common.Helpers;
