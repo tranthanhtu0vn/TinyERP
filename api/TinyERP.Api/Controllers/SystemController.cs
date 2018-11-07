@@ -8,7 +8,7 @@
     public class SystemController : BaseApiController
     {
         [Route("getMyName")]
-        [HttpPost()]
+        [HttpGet()]
         [ResponseWrapper()]
         public string GetMyName() {
             return "TU Tran";

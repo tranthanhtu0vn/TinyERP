@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.12
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyERP.Api", "TinyERP.Api\TinyERP.Api.csproj", "{3E52064B-11A9-4B1A-8A2D-9A98EE84ECD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinyERP.HRM", "TinyERP.HRM\TinyERP.HRM.csproj", "{C578BB8D-DAAF-4DEF-BDB3-57E014AC3997}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3E52064B-11A9-4B1A-8A2D-9A98EE84ECD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E52064B-11A9-4B1A-8A2D-9A98EE84ECD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E52064B-11A9-4B1A-8A2D-9A98EE84ECD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C578BB8D-DAAF-4DEF-BDB3-57E014AC3997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C578BB8D-DAAF-4DEF-BDB3-57E014AC3997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C578BB8D-DAAF-4DEF-BDB3-57E014AC3997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C578BB8D-DAAF-4DEF-BDB3-57E014AC3997}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
