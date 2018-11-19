@@ -5,8 +5,8 @@ export interface ISystemService{
 }
 export class SystemService extends BaseService implements ISystemService{
     public getMyName():Promise{
-        let uri="http://localhost:56622/api/system/getMyName";
+        let uri="http://api.tinyerp.training.com/api/system/getMyName";
         let connector: IConnector = window.ioc.resolve(IoCNames.IConnector);
-        return connector.post(uri);
+        return connector.get(uri);
     }
 }

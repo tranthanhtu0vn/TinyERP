@@ -15,6 +15,6 @@ import mainMenus from "./_share/config/mainMenus";
 export class HrmModule extends BaseModule {
     constructor() {
         super(new ModuleConfig(ModuleNames.HRM, ioc, routes, mainMenus));
-        //this.mainMenus = mainMenus;
+        this.mainMenus = mainMenus;
     }
 }
