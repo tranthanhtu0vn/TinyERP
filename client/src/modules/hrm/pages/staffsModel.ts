@@ -1,4 +1,6 @@
+import { PageAction } from "@app/common";
 export class StaffsModel{
+    public actions:Array<PageAction>=[];
     public options: any = {};
     constructor(){
         this.options = {
@@ -8,5 +10,8 @@ export class StaffsModel{
                 { field: "department", title: "Department"}
             ]
         };
+    }
+    public addAction(action: PageAction):void{
+        this.actions.push(action);
     }
 }

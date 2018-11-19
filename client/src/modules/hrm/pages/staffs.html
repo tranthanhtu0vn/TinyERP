@@ -1,5 +1,8 @@
 <page>
-    <page-header>Manage Staffs</page-header>
+    <page-header>
+        Manage Staffs
+        <page-actions [actions]=models.actions></page-actions>
+    </page-header>
     <page-content>
         <grid 
             [options]="model.options" 

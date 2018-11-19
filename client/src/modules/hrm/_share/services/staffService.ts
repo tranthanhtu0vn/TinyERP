@@ -7,4 +7,10 @@ export class StaffService extends BaseService implements IStaffService{
         let iconnector: IConnector = window.ioc.resolve(IoCNames.IConnector);
         return iconnector.get(uri);
     }
+
+    public create(staff: any):Promise{
+        let uri="http://localhost:56622/api/hrm/staffs";
+        let iconnector: IConnector = window.ioc.resolve(IoCNames.IConnector);
+        return iconnector.post(uri, staff);
+    }
 }

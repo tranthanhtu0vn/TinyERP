@@ -7,7 +7,7 @@
     using Context;
 
     [DbContext(Use = typeof(IHRMContext))]
-    internal class Staff: BaseAggregateRoot
+    public class Staff: BaseAggregateRoot
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
