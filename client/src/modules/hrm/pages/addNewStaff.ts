@@ -16,4 +16,7 @@ export class AddNewStaff extends BasePage<AddNewStaffModel>{
             self.navigate(routes.staffs.name);
         });
     }
+    public onCancelClicked():void{
+        this.navigate(routes.staffs.name);
+    }
 }

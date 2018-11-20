@@ -610,3 +610,55 @@ INFO  2018-11-20 11:04:07,058  9815ms DefaultLogger          Info               
 INFO  2018-11-20 11:04:07,076  9833ms DefaultLogger          Info               - there are 0 task(s) matched with 'IApplicationInitializedTask`1' type
 INFO  2018-11-20 11:04:07,122  9879ms DefaultLogger          Info               - there are 0 task(s) matched with 'IApplicationInitializedTask`1' type
 INFO  2018-11-20 11:04:07,140  9897ms DefaultLogger          Info               - there are 0 task(s) matched with 'IApplicationInitializedTask`1' type
+INFO  2018-11-20 11:32:32,940 1715698ms DefaultLogger          Info               - there are 0 task(s) matched with 'IApplicationEndedTask`1' type
+INFO  2018-11-20 13:27:27,754   175ms DefaultLogger          Info               - there are 1 task(s) matched with 'IDbMigrationTask`1' type
+INFO  2018-11-20 13:27:27,825   246ms DefaultLogger          Info               - IDbMigrationTask`1 (1/1): Starting 'TinyERP.Common.Tasks.RunMSSQLMigrationTask'
+INFO  2018-11-20 13:27:27,957   378ms DefaultLogger          Info               - Starting migration for 'TinyERP.Common.IDefaultDbContext'
+INFO  2018-11-20 13:27:28,344   765ms DefaultLogger          Info               - Migration for 'TinyERP.Common.IDefaultDbContext' was failed with error:{"ClassName":"System.NullReferenceException","Message":"Object reference not set to an instance of an object.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at TinyERP.Common.Helpers.ConnectionStringHelper.GetConnectionString[TDbContext]()\r\n   at TinyERP.Common.Data.Migration.MigrationExecutor`1.GetConfiguration()\r\n   at TinyERP.Common.Data.Migration.MigrationExecutor`1.Execute()","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetConnectionString\nTinyERP.Common, Version=1.0.0.1, Culture=neutral, PublicKeyToken=null\nTinyERP.Common.Helpers.ConnectionStringHelper\nTinyERP.Common.Data.IConnectionString GetConnectionString[TDbContext]()","HResult":-2147467261,"Source":"TinyERP.Common","WatsonBuckets":null}
+INFO  2018-11-20 13:27:28,346   767ms DefaultLogger          Info               - RunSeed for 'TinyERP.Common.IDefaultDbContext' was started
+INFO  2018-11-20 13:27:28,394   815ms DefaultLogger          Info               - there are 0 task(s) matched with 'IDbContextMigrationCompleted`1' type
+INFO  2018-11-20 13:27:28,394   815ms DefaultLogger          Info               - RunSeed for 'TinyERP.Common.IDefaultDbContext' was completed
+INFO  2018-11-20 13:27:28,395   816ms DefaultLogger          Info               - IDbMigrationTask`1 (1/1): 'TinyERP.Common.Tasks.RunMSSQLMigrationTask' was completed
+INFO  2018-11-20 13:27:28,428   849ms DefaultLogger          Info               - there are 1 task(s) matched with 'IApplicationStartedTask`1' type
+INFO  2018-11-20 13:27:28,429   850ms DefaultLogger          Info               - IApplicationStartedTask`1 (1/1): Starting 'TinyERP.Common.Tasks.Mapping.AutoMapperConfigurationTask'
+INFO  2018-11-20 13:27:28,493   914ms DefaultLogger          Info               - IApplicationStartedTask`1 (1/1): 'TinyERP.Common.Tasks.Mapping.AutoMapperConfigurationTask' was completed
+INFO  2018-11-20 13:27:28,527   948ms DefaultLogger          Info               - there are 2 task(s) matched with 'IApplicationStartedTask`1' type
+INFO  2018-11-20 13:27:28,528   949ms DefaultLogger          Info               - IApplicationStartedTask`1 (1/2): Starting 'TinyERP.Common.Tasks.Formatter.JsonSerializerTask'
+INFO  2018-11-20 13:27:28,635  1056ms DefaultLogger          Info               - IApplicationStartedTask`1 (1/2): 'TinyERP.Common.Tasks.Formatter.JsonSerializerTask' was completed
+INFO  2018-11-20 13:27:28,635  1056ms DefaultLogger          Info               - IApplicationStartedTask`1 (2/2): Starting 'TinyERP.Common.DI.Castle.RegisterCastleContainerTask'
+INFO  2018-11-20 13:27:29,024  1445ms DefaultLogger          Info               - there are 0 task(s) matched with 'IBootstrapper' type
+INFO  2018-11-20 13:27:29,064  1485ms DefaultLogger          Info               - there are 6 task(s) matched with 'IBootstrapper`1' type
+INFO  2018-11-20 13:27:29,065  1486ms DefaultLogger          Info               - IBootstrapper`1 (1/6): Starting 'TinyERP.Common.Bootstrap'
+INFO  2018-11-20 13:27:29,126  1547ms DefaultLogger          Info               - IBootstrapper`1 (1/6): 'TinyERP.Common.Bootstrap' was completed
+INFO  2018-11-20 13:27:29,126  1547ms DefaultLogger          Info               - IBootstrapper`1 (2/6): Starting 'TinyERP.Common.Email.Bootstrap'
+INFO  2018-11-20 13:27:29,128  1549ms DefaultLogger          Info               - IBootstrapper`1 (2/6): 'TinyERP.Common.Email.Bootstrap' was completed
+INFO  2018-11-20 13:27:29,128  1549ms DefaultLogger          Info               - IBootstrapper`1 (3/6): Starting 'TinyERP.HRM.Repository.Bootstrap'
+INFO  2018-11-20 13:27:29,130  1551ms DefaultLogger          Info               - IBootstrapper`1 (3/6): 'TinyERP.HRM.Repository.Bootstrap' was completed
+INFO  2018-11-20 13:27:29,130  1551ms DefaultLogger          Info               - IBootstrapper`1 (4/6): Starting 'TinyERP.HRM.Query.Bootstrap'
+INFO  2018-11-20 13:27:29,131  1552ms DefaultLogger          Info               - IBootstrapper`1 (4/6): 'TinyERP.HRM.Query.Bootstrap' was completed
+INFO  2018-11-20 13:27:29,132  1553ms DefaultLogger          Info               - IBootstrapper`1 (5/6): Starting 'TinyERP.HRM.Event.Bootstrap'
+INFO  2018-11-20 13:27:29,135  1556ms DefaultLogger          Info               - IBootstrapper`1 (5/6): 'TinyERP.HRM.Event.Bootstrap' was completed
+INFO  2018-11-20 13:27:29,135  1556ms DefaultLogger          Info               - IBootstrapper`1 (6/6): Starting 'TinyERP.HRM.Command.Bootstrap'
+INFO  2018-11-20 13:27:29,139  1560ms DefaultLogger          Info               - IBootstrapper`1 (6/6): 'TinyERP.HRM.Command.Bootstrap' was completed
+INFO  2018-11-20 13:27:29,139  1560ms DefaultLogger          Info               - IApplicationStartedTask`1 (2/2): 'TinyERP.Common.DI.Castle.RegisterCastleContainerTask' was completed
+INFO  2018-11-20 13:27:29,172  1593ms DefaultLogger          Info               - there are 0 task(s) matched with 'IApplicationReadyTask`1' type
+INFO  2018-11-20 13:27:29,233  1654ms DefaultLogger          Info               - there are 3 task(s) matched with 'IApplicationReadyTask`1' type
+INFO  2018-11-20 13:27:29,234  1655ms DefaultLogger          Info               - IApplicationReadyTask`1 (1/3): Starting 'TinyERP.Common.Tasks.EventSubcriber.RegisterRemoteEventSubcriberTask'
+INFO  2018-11-20 13:27:29,364  1785ms DefaultLogger          Info               - IApplicationReadyTask`1 (1/3): 'TinyERP.Common.Tasks.EventSubcriber.RegisterRemoteEventSubcriberTask' was completed
+INFO  2018-11-20 13:27:29,365  1786ms DefaultLogger          Info               - IApplicationReadyTask`1 (2/3): Starting 'TinyERP.Common.Email.Task.CreateAppSettingForEmailTemplate'
+INFO  2018-11-20 13:27:29,366  1787ms DefaultLogger          Info               - 'CreateAppSettingForEmailTemplate' was started
+INFO  2018-11-20 13:27:29,374  1795ms DefaultLogger          Info               - RunTasksInOrder: IApplicationReadyTask`1 (2/3): 'TinyERP.Common.Email.Task.CreateAppSettingForEmailTemplate' was failed with error: {"ClassName":"Castle.MicroKernel.ComponentNotFoundException","Message":"No component for supporting the service TinyERP.Setting.Share.Facade.ISettingFacade was found","Data":null,"InnerException":null,"HelpURL":"groups.google.com/group/castle-project-users","StackTraceString":"   at Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)\r\n   at Castle.Windsor.WindsorContainer.Resolve[T]()\r\n   at TinyERP.Common.DI.Castle.CastleContainer.Resolve[TInterface]()\r\n   at TinyERP.Common.Email.Task.CreateAppSettingForEmailTemplate.CreateIfNotExist(String key, String value, String groupkey)\r\n   at TinyERP.Common.Email.Task.CreateAppSettingForEmailTemplate.Execute(ITaskArgument context)\r\n   at TinyERP.Common.Helpers.AssemblyHelper.RunTasksInOrder[TaskType,ContextType](IEnumerable`1 tasks, ContextType context)","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nCastle.MicroKernel.IKernelInternal.Resolve\nCastle.Windsor, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc\nCastle.MicroKernel.DefaultKernel\nSystem.Object Castle.MicroKernel.IKernelInternal.Resolve(System.Type, System.Collections.IDictionary, Castle.MicroKernel.IReleasePolicy)","HResult":-2146233088,"Source":"Castle.Windsor","WatsonBuckets":null}
+INFO  2018-11-20 13:27:29,375  1796ms DefaultLogger          Info               - IApplicationReadyTask`1 (3/3): Starting 'TinyERP.HRM.Share.Task.CreateDefaultStaff'
+INFO  2018-11-20 13:27:35,963  8384ms DefaultLogger          Info               - New staff (id: 6b0a70e2-99ad-434f-bb34-5d4083aaeb7c) was created
+INFO  2018-11-20 13:27:35,968  8389ms DefaultLogger          Info               - IApplicationReadyTask`1 (3/3): 'TinyERP.HRM.Share.Task.CreateDefaultStaff' was completed
+INFO  2018-11-20 13:27:36,015  8436ms DefaultLogger          Info               - there are 3 task(s) matched with 'IRouteConfiguredTask' type
+INFO  2018-11-20 13:27:36,018  8439ms DefaultLogger          Info               - IRouteConfiguredTask (1/3): Starting 'TinyERP.Common.Tasks.Request.ConfigCustomControllerResolver'
+INFO  2018-11-20 13:27:36,021  8442ms DefaultLogger          Info               - IRouteConfiguredTask (1/3): 'TinyERP.Common.Tasks.Request.ConfigCustomControllerResolver' was completed
+INFO  2018-11-20 13:27:36,022  8443ms DefaultLogger          Info               - IRouteConfiguredTask (2/3): Starting 'TinyERP.Common.Tasks.CORS.ConfigCORS'
+INFO  2018-11-20 13:27:36,120  8541ms DefaultLogger          Info               - IRouteConfiguredTask (2/3): 'TinyERP.Common.Tasks.CORS.ConfigCORS' was completed
+INFO  2018-11-20 13:27:36,121  8542ms DefaultLogger          Info               - IRouteConfiguredTask (3/3): Starting 'TinyERP.Common.Tasks.Routing.RegisterDefaultRouteTask'
+INFO  2018-11-20 13:27:36,155  8576ms DefaultLogger          Info               - IRouteConfiguredTask (3/3): 'TinyERP.Common.Tasks.Routing.RegisterDefaultRouteTask' was completed
+INFO  2018-11-20 13:27:37,924 10345ms DefaultLogger          Info               - there are 0 task(s) matched with 'IApplicationInitializedTask`1' type
+INFO  2018-11-20 13:27:37,985 10406ms DefaultLogger          Info               - there are 0 task(s) matched with 'IApplicationInitializedTask`1' type
+INFO  2018-11-20 13:27:38,072 10493ms DefaultLogger          Info               - there are 0 task(s) matched with 'IApplicationInitializedTask`1' type
+INFO  2018-11-20 13:27:38,126 10547ms DefaultLogger          Info               - there are 0 task(s) matched with 'IApplicationInitializedTask`1' type
