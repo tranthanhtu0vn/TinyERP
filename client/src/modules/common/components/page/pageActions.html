@@ -1,6 +1,6 @@
 <div class="x_content">
 	<ng-container *ngFor="let item of model.items">
-		<form-button *ngIf="item.type!=PageActionItemType.Dropdown" label="{{i18nHelper.resolve(item.key)}}" (onClick)=item.handler($event)></form-button>
-		<form-dropdown-button *ngIf="item.type==PageActionItemType.Dropdown" label="{{i18nHelper.resolve(item.key)}}" [items]=item.items></form-dropdown-button>
+		<form-button *ngIf="item.type!=PageActionItemType.Dropdown" label="{{item.getText()}}" (onClick)=item.handler($event)></form-button>
+		<form-dropdown-button *ngIf="item.type==PageActionItemType.Dropdown" label="{{item.getText()}}" [items]=item.items></form-dropdown-button>
 	</ng-container>
 </div>

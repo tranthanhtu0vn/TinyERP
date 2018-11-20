@@ -3,6 +3,7 @@ import { IResourceManager } from "../../iresourceManager";
 import { BaseControl } from "../../models/ui";
 import { PageActionsModel } from "./pageActionsModel";
 import {PageActionItemType} from "../../enum";
+import {PageAction} from "../../models/ui/pageAction";
 
 @Component({
     selector: "page-actions",
@@ -11,7 +12,7 @@ import {PageActionItemType} from "../../enum";
 export class PageActions extends BaseControl {
     public PageActionItemType: any = PageActionItemType;
     public model: PageActionsModel = new PageActionsModel([]);
-    @Input() actions: Array<any>;
+    @Input() actions: Array<PageAction>=[];
     protected onInit() {
         this.model = new PageActionsModel(this.actions);
     }

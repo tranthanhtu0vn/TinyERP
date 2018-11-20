@@ -13,7 +13,7 @@ export class Staffs extends BasePage<StaffsModel>{
         super();
         let self = this;
         self.model = new StaffsModel();
-        self.model.addAction(new PageAction("Add new Staff", ()=>{self.onAddNewStaffClicked();}));
+        self.model.addAction(new PageAction("",()=>{self.onAddNewStaffClicked();}).setText("Add new Staff"));
     }
     private onAddNewStaffClicked():void{
         this.navigate(routes.addNewStaff.name);
