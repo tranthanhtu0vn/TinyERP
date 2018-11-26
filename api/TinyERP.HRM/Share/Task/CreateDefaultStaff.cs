@@ -9,7 +9,7 @@
         public override void Execute(ITaskArgument context)
         {
             if (!this.IsValid(context.Type)) { return; }
-            CreateStaffRequest request = new CreateStaffRequest("Tu", "Tran", "contact@tranthanhtu.vn");
+            CreateStaffRequest request = new CreateStaffRequest("Tu", "Tran", "contact@tranthanhtu.vn", "123");
             ICommandHandlerStrategy commandHandler = CommandHandlerStrategyFactory.Create<TinyERP.HRM.Aggregate.Staff>();
             CreateStaffResponse response = commandHandler.Execute<CreateStaffRequest, CreateStaffResponse>(request);
             this.Logger.Info("New staff (id: {0}) was created", response.Id);

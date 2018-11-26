@@ -73,6 +73,12 @@
     <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
     <Reference Include="MongoDB.Bson, Version=1.9.2.235, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
       <HintPath>..\packages\TinyERP.Common.1.0.0.33\lib\net451\MongoDB.Bson.dll</HintPath>
     </Reference>
@@ -173,6 +179,48 @@
     </Reference>
     <Reference Include="TinyERP.Search.Share, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\TinyERP.Search.Share.1.0.0.6\lib\net451\TinyERP.Search.Share.dll</HintPath>
+    </Reference>
+    <Reference Include="TinyERP.Security, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyERP.Security.1.0.0.12\lib\net452\TinyERP.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="TinyERP.Security.Aggregate, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyERP.Security.1.0.0.12\lib\net452\TinyERP.Security.Aggregate.dll</HintPath>
+    </Reference>
+    <Reference Include="TinyERP.Security.Command, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyERP.Security.1.0.0.12\lib\net452\TinyERP.Security.Command.dll</HintPath>
+    </Reference>
+    <Reference Include="TinyERP.Security.Command.Impl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyERP.Security.1.0.0.12\lib\net452\TinyERP.Security.Command.Impl.dll</HintPath>
+    </Reference>
+    <Reference Include="TinyERP.Security.Context, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyERP.Security.1.0.0.12\lib\net452\TinyERP.Security.Context.dll</HintPath>
+    </Reference>
+    <Reference Include="TinyERP.Security.Event, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyERP.Security.1.0.0.12\lib\net452\TinyERP.Security.Event.dll</HintPath>
+    </Reference>
+    <Reference Include="TinyERP.Security.EventHandler, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyERP.Security.1.0.0.12\lib\net452\TinyERP.Security.EventHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="TinyERP.Security.EventHandler.Impl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyERP.Security.1.0.0.12\lib\net452\TinyERP.Security.EventHandler.Impl.dll</HintPath>
+    </Reference>
+    <Reference Include="TinyERP.Security.Owin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyERP.Security.1.0.0.12\lib\net452\TinyERP.Security.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="TinyERP.Security.Query, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyERP.Security.1.0.0.12\lib\net452\TinyERP.Security.Query.dll</HintPath>
+    </Reference>
+    <Reference Include="TinyERP.Security.Query.Impl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyERP.Security.1.0.0.12\lib\net452\TinyERP.Security.Query.Impl.dll</HintPath>
+    </Reference>
+    <Reference Include="TinyERP.Security.Repository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyERP.Security.1.0.0.12\lib\net452\TinyERP.Security.Repository.dll</HintPath>
+    </Reference>
+    <Reference Include="TinyERP.Security.Repository.Impl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyERP.Security.1.0.0.12\lib\net452\TinyERP.Security.Repository.Impl.dll</HintPath>
+    </Reference>
+    <Reference Include="TinyERP.Security.Share, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyERP.Security.1.0.0.12\lib\net452\TinyERP.Security.Share.dll</HintPath>
     </Reference>
     <Reference Include="TinyERP.Setting.Share, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\TinyERP.Setting.Share.1.0.0\lib\net451\TinyERP.Setting.Share.dll</HintPath>
