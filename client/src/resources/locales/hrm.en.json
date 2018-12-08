@@ -1,1 +1,14 @@
-{}
+{
+    "staffs":{
+        "title":"Manage Staffs",
+        "addNewStaff":"Add Staff",
+        "firstName":"First Name",
+        "lastName":"Last Name",
+        "department":"Department"
+    },
+    "addNewStaff":{
+        "title":"Add new Staff",
+        "firstName":"First Name",
+        "lastName":"Last Name"
+    }
+}

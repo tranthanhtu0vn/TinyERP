@@ -2,12 +2,12 @@ import { PageAction } from "@app/common";
 export class StaffsModel{
     public actions:Array<PageAction>=[];
     public options: any = {};
-    constructor(){
+    constructor(i18n: any){
         this.options = {
             columns: [
-                { field: "firstName", title: "First Name"},
-                { field: "lastName", title: "Last Name"},
-                { field: "department", title: "Department"}
+                { field: "firstName", title: i18n.hrm.staffs.firstName},
+                { field: "lastName", title: i18n.hrm.staffs.lastName},
+                { field: "department", title: i18n.hrm.staffs.department}
             ]
         };
     }

@@ -1,11 +1,11 @@
 <page>
-    <page-header>Add new Staff</page-header>
+    <page-header>{{i18n.hrm.addNewStaff.title}}</page-header>
     <page-content>
         <horizontal-form>
-            <form-text-input [labelText]="'First Name'" [(model)]=model.firstName></form-text-input>
-            <form-text-input [labelText]="'Last Name'" [(model)]=model.lastName></form-text-input>
-            <form-primary-button [label]="'Save'" (onClick)="onSaveClicked($event)"></form-primary-button>
-            <form-default-button [label]="'Cancel'" (onClick)="onCancelClicked($event)"></form-default-button>
+            <form-text-input [labelText]="i18n.hrm.addNewStaff.firstName" [(model)]=model.firstName></form-text-input>
+            <form-text-input [labelText]="i18n.hrm.addNewStaff.lastName" [(model)]=model.lastName></form-text-input>
+            <form-primary-button [label]="i18n.common.form.save" (onClick)="onSaveClicked($event)"></form-primary-button>
+            <form-default-button [label]="i18n.common.form.cancel" (onClick)="onCancelClicked($event)"></form-default-button>
         </horizontal-form>
     </page-content>
 </page>

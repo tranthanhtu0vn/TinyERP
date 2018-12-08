@@ -12,8 +12,8 @@ export class Staffs extends BasePage<StaffsModel>{
     constructor() {
         super();
         let self = this;
-        self.model = new StaffsModel();
-        self.model.addAction(new PageAction("",()=>{self.onAddNewStaffClicked();}).setText("Add new Staff"));
+        self.model = new StaffsModel(this.i18n);
+        self.model.addAction(new PageAction("hrm.staffs.addNewStaff",()=>{self.onAddNewStaffClicked();}));
     }
     private onAddNewStaffClicked():void{
         this.navigate(routes.addNewStaff.name);
