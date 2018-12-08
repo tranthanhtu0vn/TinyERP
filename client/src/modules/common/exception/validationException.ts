@@ -19,4 +19,8 @@ export class ValidationException {
     public throwIfHasError(): void {
         window.ioc.resolve(IoCNames.IEventManager).publish(this.validationType, this);
     }
+
+    public addErrors(errors: Array<ValidationError>):void{
+        this.errors = this.errors.concat(errors);
+    }
 }   

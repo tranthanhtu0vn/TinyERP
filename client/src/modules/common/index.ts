@@ -80,6 +80,9 @@ export * from "./components/error/errorMessage";
 export * from "./support/isupportService";
 export * from "./support/enum";
 
+/*validation*/
+export * from "./exception/decorators/required";
+
 
 import iocHelper from "./ioc/iocHelper";
 import appHelper from "./application/appHelper";

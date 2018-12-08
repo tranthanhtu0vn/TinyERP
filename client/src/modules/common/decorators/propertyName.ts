@@ -1,6 +1,5 @@
-export const DecoratorConst={
-    PROPERTY_KEY:"PROPERTY_KEY"
-};
+import { DecoratorConst } from "../enum";
+
 export function propertyName(name: string): any {
     return function(target: any, propertyKey: string, descriptor: PropertyDescriptor){
         var constructor = target.constructor||{};

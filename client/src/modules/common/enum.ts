@@ -383,3 +383,8 @@ export enum InvitationStatus{
     SendEmail = 2,
     ResendEmail = 4
 }
+
+export const DecoratorConst={
+    PROPERTY_KEY:"PROPERTY_KEY",
+    VALIDATION_KEY:"VALIDATION_KEY"
+};

@@ -141,6 +141,7 @@ interface IUserProfile{
 
 interface IValidationError{
     key:string;
+    params?:any;
 }
 
 interface IException{

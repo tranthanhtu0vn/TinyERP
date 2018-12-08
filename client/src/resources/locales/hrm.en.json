@@ -1,1 +1,6 @@
-{}
+{
+    "addNewStaff":{
+        "firstNameWasRequired":"firstNameWasRequired",
+        "lastNameWasRequired":"lastNameWasRequired"
+    }
+}

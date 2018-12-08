@@ -10,6 +10,9 @@ import routes from "../_share/config/routes";
 export class AddNewStaff extends BasePage<AddNewStaffModel>{
     public model: AddNewStaffModel= new AddNewStaffModel();
     public onSaveClicked():void{
+        if(this.model.validated()){
+            return;
+        }
         let service: IStaffService = window.ioc.resolve(LocalIoCNames.IStaffService);
         let self=this;
         service.create(self.model).then(()=>{

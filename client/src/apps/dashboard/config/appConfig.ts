@@ -15,7 +15,7 @@ let appConfig: IAppConfig = {
         files: helperFacade.moduleHelper.getModuleLocales(modules).merge([AppThemeType.Default])
     },
     localeUrl: "/src/resources/locales/",
-    rootApi: "http://api.tinyerp.com/api/",
+    rootApi: "http://api.tinyerp.trainning.com/api/",
     ioc: ioc,
     routes: helperFacade.routeHelper.getThemeRoutes(themes),
     defaultUrl: "/dashboard",

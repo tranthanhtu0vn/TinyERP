@@ -27,5 +27,6 @@ let ioc = [
     { name: IoCNames.IDragnDropManager, instance: DragnDropManager, lifeCycle: IoCLifeCycle.Transient },
     { name: IoCNames.IApplicationService, instance: ApplicationService, lifeCycle: IoCLifeCycle.Singleton },
     { name: IoCNames.ISupportService, instance: SupportService, lifeCycle: IoCLifeCycle.Transient }
+
 ];
 export default ioc;

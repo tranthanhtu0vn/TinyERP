@@ -1,5 +1,6 @@
 import {AuthorizeGrantType} from "../../enum";
-import {propertyName, DecoratorConst} from "../../../decorators/propertyName";
+import {propertyName} from "../../../decorators/propertyName";
+import { DecoratorConst } from "../../../enum";
 export class AccessTokenRequest{
     @propertyName("client_id")
     public clientId:string;
