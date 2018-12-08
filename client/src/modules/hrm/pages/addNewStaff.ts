@@ -9,6 +9,14 @@ import routes from "../_share/config/routes";
 })
 export class AddNewStaff extends BasePage<AddNewStaffModel>{
     public model: AddNewStaffModel= new AddNewStaffModel();
+    private currentLanguage:string="en";
+
+    public onChangeLanguageClicked(){
+        let newLanguage:string=this.currentLanguage=="en"?"vn":"en";
+        this.i18nHelper.reload(newLanguage);
+        this.currentLanguage=newLanguage;
+    }
+
     public onSaveClicked():void{
         let service: IStaffService = window.ioc.resolve(LocalIoCNames.IStaffService);
         let self=this;

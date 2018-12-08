@@ -1,0 +1,14 @@
+{
+    "staffs":{
+        "title":"Manage Staffs vn",
+        "addNewStaff":"Add Staff  vn",
+        "firstName":"First Name vn",
+        "lastName":"Last Name vn",
+        "department":"Department vn"
+    },
+    "addNewStaff":{
+        "title":"Add new Staff vn",
+        "firstName":"First Name vn",
+        "lastName":"Last Name vn"
+    }
+}

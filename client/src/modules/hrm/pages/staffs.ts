@@ -9,12 +9,14 @@ import routes from "../_share/config/routes";
 })
 export class Staffs extends BasePage<StaffsModel>{
     public model: StaffsModel;
+    
     constructor() {
         super();
         let self = this;
         self.model = new StaffsModel(this.i18n);
         self.model.addAction(new PageAction("hrm.staffs.addNewStaff",()=>{self.onAddNewStaffClicked();}));
     }
+   
     private onAddNewStaffClicked():void{
         this.navigate(routes.addNewStaff.name);
     }

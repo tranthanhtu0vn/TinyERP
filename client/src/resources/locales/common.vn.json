@@ -1,0 +1,95 @@
+{
+  "pageActions":{
+    "refresh":"Refresh",
+    "addNew":"Add new"
+  },
+  "errors":{
+    "unAuthorizedAccess":{
+      "title":"UnAuthorized Request",
+      "message":"content of UnAuthorized Request"
+    }
+  },
+  "accountStatus":{
+    "None":"None",
+    "Active":"Active",
+    "InActive":"InActive",
+    "Pending":"Pending",
+    "Deleted":"Deleted",
+    "WaittingForActivation":"WaittingForActivation"
+  },
+  "storageStatus":{
+    "None":"None",
+    "AuthorizedFail":"AuthorizedFail",
+    "HasAuthorizeCode":"HasAuthorizeCode",
+    "HasAccessToken":"HasAccessToken"
+  },
+  "storageType":{
+    "OneDrive":"OneDrive",
+    "GoogleDrive":"GoogleDrive"
+  },
+  "home":"Home",
+  "icons":{
+    "copy":"Copy"
+  },
+  "validation":{
+    "fixErrors":"Please have a look and fix all of errors as below:"
+  },
+  "httpError": {
+    "notFoundExceptionTitle":"Resource Not Found",
+    "notFoundExceptionContent": "Requested resource was not found. Please contact system administration for more information",
+
+    "unAuthorizedErrorTitle":"UnAuthorized Access",
+    "unAuthorizedErrorContent": "You was not authorized to access to requested resource. Please contact system administration for more information",
+
+    "genericExceptionTitle":"Generic Error",
+    "genericExceptionContent": "Unknow error occured. Please contact system administration for more information",
+
+    "badRequestErrorTitle":"Bad Request",
+    "badRequestErrorContent": "Your request was considered as invalid. Please contact system administration for more information"
+  },
+  "form": {
+    "addNew":"Add new",
+    "save": "Save vn",
+    "cancel": "Cancel vn",
+    "send": "Send",
+    "view": "View",
+    "delete": "Delete",
+    "edit": "Edit",
+    "approve":"Approve",
+    "approved":"Approved",
+    "import":"Import",
+    "login":"Login",
+    "signIn":"Sign In",
+    "continue":"Continue",
+    "select":"Select",
+    "status": {
+      "active": "Active",
+      "inactive": "InActive",
+      "resolved": "Resolved",
+      "cancelled": "Cancelled",
+      "new": "New"
+    }
+  },
+  "permissions": {
+    "user": {
+      "view": "User management - View User",
+      "edit": "User management - Edot User",
+      "add": "User management - Add User"
+    }
+  },
+  "itemStatus": {
+    "none": "None",
+    "active": "Active",
+    "inActive": "InActive",
+    "deleted": "Deleted",
+    "waitForActivating": "Wait For Activating"
+  },
+  "page": {
+    "action": "Actions"
+  },
+  "noData":"There was no data",
+  "subscribeTooltip":"Subscribe to receive notifications",
+  "auth":{
+    "signout":"Sign out"
+  }
+}

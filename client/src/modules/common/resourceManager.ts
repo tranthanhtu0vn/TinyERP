@@ -10,19 +10,27 @@ import userProfileHelper from "./helpers/userProfileHelper";
 
 
 export class ResourceManager implements IResourceManager {
+    private language:string;
     private resources: Hashtable<any>;
     private callbacks: Array<Hashtable<any>>;
+    private locales:Array<string>=[];
     constructor() {
         this.resources = new Hashtable<any>();
         this.callbacks = new Array<Hashtable<any>>();
+        this.language=userProfileHelper.getLang();
     }
     public getResourceData() {
         return this.resources.data;
     }
-    public load(modules: Array<string>) {
+    public reload(language:string):void{
+        this.language=language;
+        this.load(this.locales, true);
+    }
+    public load(modules: Array<string>, isReload:boolean=false) {
         let self: ResourceManager = this;
+        this.locales=modules;
         modules.forEach(function (module: string) {
-            if (self.resources.exist(module)) { return; }
+            if (!isReload && self.resources.exist(module)) { return; }
             self.loadResource(module);
         });
     }
@@ -47,7 +55,7 @@ export class ResourceManager implements IResourceManager {
     }
     private loadResource(moduleName: string): Promise {
         let def = PromiseFactory.create();
-        let lang: string = userProfileHelper.getLang();
+        let lang: string = this.language;
         let resourcePath = String.format("{0}{1}.{2}.json", appHelper.getConfig().localeUrl, moduleName, lang);
         let connector: IConnector = window.ioc.resolve(IoCNames.IConnector);
         let self: ResourceManager = this;

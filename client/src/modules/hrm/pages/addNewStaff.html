@@ -1,5 +1,9 @@
 <page>
-    <page-header>{{i18n.hrm.addNewStaff.title}}</page-header>
+    <page-header>
+        {{i18n.hrm.addNewStaff.title}}
+        <form-default-button [label]="'Change Language'" (onClick)="onChangeLanguageClicked($event)"></form-default-button>
+    </page-header>
+
     <page-content>
         <horizontal-form>
             <form-text-input [labelText]="i18n.hrm.addNewStaff.firstName" [(model)]=model.firstName></form-text-input>
