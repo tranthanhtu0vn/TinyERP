@@ -1,3 +1,7 @@
 export interface IValidator{
-    required(val: any):boolean;
+    property:string;
+    errorKey:string;
+    name:string;
+    isValid(val: any):boolean;
+    //required(val: any):boolean;
 }

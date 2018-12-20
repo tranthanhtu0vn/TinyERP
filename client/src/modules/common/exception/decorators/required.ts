@@ -5,27 +5,31 @@ import { ValidatorFactory } from "../validator/validatorFactory";
 import validationHelper from "../validationHelper";
 import { IEventManager } from "../../event/ieventManager";
 import { IoCNames } from "../../ioc/enum";
-import { ValidationEvent } from "../enum";
+import { ValidationEvent, ValidationType } from "../enum";
 import { ValidationException } from "../validationException";
 
 export function required(errorKey: string): any{
-    return function(target: any, propertyKey: string, descriptor: PropertyDescriptor){
+    return function(target: any, propertyKey: string, descriptor: any){
+        var type: any = window.Reflect.getMetadata("design:type", target, propertyKey);
         let internalVal="";
+        let typeName:string = type.name;
+        typeName=String.format("{0}{1}Validator", String.toPascalCase(typeName), "Required");
+        let validator: IValidator = ValidatorFactory.create(typeName);
+        validator.errorKey=errorKey;
+        validator.property=propertyKey;
+        validationHelper.addValidator(target, propertyKey,DecoratorConst.VALIDATOR_KEY, validator);
+
         let setFunc=function(val: any){
             internalVal=val;
-            let typeName:string = typeof val;
-            typeName=String.format("{0}Validator", String.toPascalCase(typeName));
-            let validator: IValidator = ValidatorFactory.create(typeName);
             let eventManager: IEventManager = window.ioc.resolve(IoCNames.IEventManager);
             let validationException: ValidationException = new ValidationException();
             validationException.add(errorKey);
-            console.log(new Date(), val);
-            if(!validator.required(val)){
-                let validationError: IValidationError= new ValidationError(errorKey,{});
-                validationHelper.addValidationError(target, propertyKey,DecoratorConst.VALIDATION_KEY, validationError);
+            if(!validator.isValid(val)){
+                //let validationError: IValidationError= new ValidationError(errorKey,{});
+                //validationHelper.addValidationError(target, propertyKey,DecoratorConst.VALIDATION_KEY, validationError);
                 eventManager.publish(ValidationEvent.ValidationFail, validationException);
             }else{
-                validationHelper.removeValidationError(target, propertyKey,DecoratorConst.VALIDATION_KEY, errorKey);
+                //validationHelper.removeValidationError(target, propertyKey,DecoratorConst.VALIDATION_KEY, errorKey);
                 eventManager.publish(ValidationEvent.ValidationSuccess, validationException);
             }
         }

@@ -12,5 +12,5 @@ export enum ValidationStatus{
 }
 
 export const ValidationType={
-    StringValidator:"StringValidator"
+    StringRequiredValidator:"StringRequiredValidator"
 };

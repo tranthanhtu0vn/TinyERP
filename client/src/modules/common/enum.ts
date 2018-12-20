@@ -386,5 +386,6 @@ export enum InvitationStatus{
 
 export const DecoratorConst={
     PROPERTY_KEY:"PROPERTY_KEY",
-    VALIDATION_KEY:"VALIDATION_KEY"
+    VALIDATION_KEY:"VALIDATION_KEY",
+    VALIDATOR_KEY:"VALIDATOR_KEY"
 };

@@ -1,4 +1,4 @@
-export class ValidationError {
+export class ValidationError implements IValidationError {
     constructor(key: string, params: any) {
         this.key = key;
         this.params = params;
