@@ -7,14 +7,17 @@ import { IoCNames } from "../../ioc/enum";
 import { ValidationEvent } from "../enum";
 import { ValidationException } from "../validationException";
 import {CreateValidatorOption} from "../validator/createValidatorOption";
+import { StringValueInRangeValidator } from "../validator/stringValueInRangeValidator";
 
-export function required(errorKey: string): any{
+export function valueInRange(min:number, max: number, errorKey: string): any{
     return function(target: any, propertyKey: string, descriptor: any){
         var type: any = window.Reflect.getMetadata("design:type", target, propertyKey);
         let internalVal="";
         let typeName:string = type.name;
-        typeName=String.format("{0}{1}Validator", String.toPascalCase(typeName), "Required");
-        let validator: IValidator = ValidatorFactory.create(new CreateValidatorOption(typeName, propertyKey, errorKey));
+        typeName=String.format("{0}{1}Validator", String.toPascalCase(typeName), "ValueInRange");
+        let validator: StringValueInRangeValidator = <StringValueInRangeValidator>ValidatorFactory.create(new CreateValidatorOption(typeName, propertyKey, errorKey));
+        validator.max=max;
+        validator.min=min;
         validationHelper.addValidator(target, propertyKey,DecoratorConst.VALIDATOR_KEY, validator);
 
         let setFunc=function(val: any){

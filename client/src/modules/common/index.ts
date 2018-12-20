@@ -82,6 +82,7 @@ export * from "./support/enum";
 
 /*validation*/
 export * from "./exception/decorators/required";
+export * from "./exception/decorators/valueInRange";
 
 
 import iocHelper from "./ioc/iocHelper";

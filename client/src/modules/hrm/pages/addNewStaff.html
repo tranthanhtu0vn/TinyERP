@@ -3,7 +3,10 @@
     <page-content>
         <horizontal-form>
             <form-text-input 
-                [validation]="['hrm.addNewStaff.firstNameWasRequired']"
+                [validation]="[
+                    'hrm.addNewStaff.firstNameWasRequired', 
+                    'hrm.addNewStaff.firstNameMax5Letter'
+                ]"
                 [labelText]="'First Name'" [(model)]=model.firstName></form-text-input>
             <form-text-input 
                 [validation]="['hrm.addNewStaff.lastNameWasRequired']"

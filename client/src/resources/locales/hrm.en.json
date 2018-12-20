@@ -1,6 +1,7 @@
 {
     "addNewStaff":{
         "firstNameWasRequired":"firstNameWasRequired",
-        "lastNameWasRequired":"lastNameWasRequired"
+        "lastNameWasRequired":"lastNameWasRequired",
+        "firstNameMax5Letter":"firstNameMax5Letter"
     }
 }
