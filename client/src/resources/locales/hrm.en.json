@@ -1,7 +1,9 @@
 {
     "addNewStaff":{
-        "firstNameWasRequired":"firstNameWasRequired",
-        "lastNameWasRequired":"lastNameWasRequired",
-        "firstNameMax5Letter":"firstNameMax5Letter"
+        "firstNameWasRequired":"First name was required field",
+        "lastNameWasRequired":"Last name was required",
+        "firstNameMax5Letter":"First name should be in 1 (min) and 5(max) leters",
+        "fullNameTooLong":"Full name should not exceed {{MAX_FULLNAME_LENGTH}} letters.",
+        "fullNameWasExisted":"{{FIRST_NAME}} {{LAST_NAME}} user was already existed."
     }
 }

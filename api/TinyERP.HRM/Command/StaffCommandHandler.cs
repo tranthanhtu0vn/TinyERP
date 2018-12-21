@@ -7,6 +7,7 @@
     using Common.Data;
     using Repository;
     using Common.DI;
+    using Share;
 
     internal class StaffCommandHandler : BaseCommandHandler, IStaffCommandHandler
     {
@@ -27,7 +28,25 @@
         private void Validate(CreateStaffRequest command)
         {
             IValidationException validator = ValidationHelper.Validate(command);
-            // and other business validations here, such as: unit first + last name, unit email, ....
+            if (string.Format("{0} {1}", command.FirstName, command.LastName).Length > HRMConst.MAX_FULLNAME_LEGNTH) {
+                validator.Add(new ValidationError(
+                    "hrm.addNewStaff.fullNameTooLong",
+                    "MAX_FULLNAME_LENGTH",
+                    HRMConst.MAX_FULLNAME_LEGNTH.ToString()
+                    ));
+            }
+
+            IStaffRepository repo = IoC.Container.Resolve<IStaffRepository>();
+            if (
+                !string.IsNullOrWhiteSpace(command.FirstName) && 
+                !string.IsNullOrWhiteSpace(command.LastName) && 
+                repo.Exists(command.FirstName, command.LastName)) {
+                validator.Add(new ValidationError(
+                        "hrm.addNewStaff.fullNameWasExisted",
+                        "FIRST_NAME", command.FirstName,
+                        "LAST_NAME", command.LastName
+                    ));
+            }
             validator.ThrowIfError();
         }
     }

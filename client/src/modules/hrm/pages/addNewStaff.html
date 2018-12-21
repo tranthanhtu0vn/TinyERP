@@ -1,15 +1,13 @@
 <page>
     <page-header>Add new Staff</page-header>
     <page-content>
+        <error-message 
+            [messages]="['hrm.addNewStaff.']"
+        ></error-message>
         <horizontal-form>
             <form-text-input 
-                [validation]="[
-                    'hrm.addNewStaff.firstNameWasRequired', 
-                    'hrm.addNewStaff.firstNameMax5Letter'
-                ]"
                 [labelText]="'First Name'" [(model)]=model.firstName></form-text-input>
             <form-text-input 
-                [validation]="['hrm.addNewStaff.lastNameWasRequired']"
                 [labelText]="'Last Name'" [(model)]=model.lastName></form-text-input>
             <form-primary-button [label]="'Save'" (onClick)="onSaveClicked($event)"></form-primary-button>
             <form-default-button [label]="'Cancel'" (onClick)="onCancelClicked($event)"></form-default-button>

@@ -143,6 +143,7 @@
     <Compile Include="Repository\Bootstrap.cs" />
     <Compile Include="Repository\IStaffRepository.cs" />
     <Compile Include="Repository\StaffRepository.cs" />
+    <Compile Include="Share\Enum.cs" />
     <Compile Include="Share\Staff\StaffListItem.cs" />
     <Compile Include="Share\Task\CreateDefaultStaff.cs" />
   </ItemGroup>
